@@ -22,7 +22,9 @@ export default function NextAppDirEmotionCacheProvider(props: NextAppDirEmotionC
     const { options, CacheProvider = DefaultCacheProvider, children } = props;
 
     const [{ cache, flush }] = React.useState(() => {
-        const cache = createCache(options);
+        // add prepend true to ensure it's injected before Tailwind/Globals
+        // so MUI components styles can be safely hydrated without conflict
+        const cache = createCache({ ...options, prepend: true });
         cache.compat = true;
         const prevInsert = cache.insert;
         let inserted: string[] = [];
