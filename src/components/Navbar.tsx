@@ -58,13 +58,10 @@ const Navbar = () => {
     };
 
     const menuLinks = [
-        { title: "About", href: "#about" },
-        { title: "Digital Asset Treasury", href: "#treasury" },
-        { title: "Financials", href: "#financials" },
         { title: "Strategy", href: "#strategy" },
-        { title: "News & Press", href: "#media" },
-        { title: "Investor Relations", href: "#investors" },
+        { title: "Media", href: "#media" },
         { title: "Legal", href: "#legal" },
+        { title: "Contact", href: "#contact" }
     ];
 
     return (
@@ -82,20 +79,13 @@ const Navbar = () => {
                     {/* Logo */}
                     <Link href="/" className={classes.logoLink}>
                         <img
-                            src={getImagePath(isScrolled ? "assets/logo-tb-black.png" : "assets/logo-tb-white.png")}
+                            src={getImagePath(isScrolled ? "images/logo/tbiz-logo-full-dark.png" : "images/logo/tbiz-logo-full-light.png")}
                             alt="TransparentBusiness Logo"
                             className={classes.isotypeImage}
                         />
                     </Link>
 
                     <div className={classes.controls}>
-                        {/* Dummy Language Selector */}
-                        <div className={classes.langSelector}>
-                            <span className={classes.langActive}>EN</span>
-                            <span style={{ color: isScrolled ? '#DDD' : 'rgba(255,255,255,0.3)' }}>|</span>
-                            <span className={classes.langInactive}>ES</span>
-                        </div>
-
                         {/* Menu Button */}
                         <div className={classes.menuButtonWrapper}>
                             <button
@@ -108,14 +98,6 @@ const Navbar = () => {
                                 </svg>
                             </button>
                         </div>
-
-                        {/* Join Now Button */}
-                        <button
-                            onClick={openJoinModal}
-                            className={classes.joinButton}
-                        >
-                            Join Now
-                        </button>
                     </div>
                 </div>
             </motion.nav>
@@ -155,7 +137,7 @@ const Navbar = () => {
 
                             <div className={classes.menuLogo}>
                                 <Link href="/" onClick={() => setIsMenuOpen(false)} className={classes.logoLink}>
-                                    <img src={getImagePath('assets/logo-tb-black.png')} alt="TransparentBusiness" className={classes.isotypeImageMobile} />
+                                    <img src={getImagePath('images/logo/tbiz-logo-full-dark.png')} alt="TransparentBusiness" className={classes.isotypeImageMobile} />
                                 </Link>
                             </div>
 

@@ -9,24 +9,24 @@ const StrategicResponse = () => {
 
     const comparisonData = [
         {
-            feature: "Leverage",
-            traditional: "High-Risk Debt Dependency",
-            tbiz: "Debt-Free Institutional Model"
+            feature: "Feature A",
+            traditional: "Generic Approach 1",
+            tbiz: "Lorem Ipsum Strategy"
         },
         {
-            feature: "Asset Acquisition",
-            traditional: "Linear Asset Acquisition",
-            tbiz: "Strategic Equity Swaps"
+            feature: "Feature B",
+            traditional: "Generic Approach 2",
+            tbiz: "Dolor Sit Amet"
         },
         {
-            feature: "Intelligence",
-            traditional: "Manual Analysis",
-            tbiz: "AI-Powered Strategy"
+            feature: "Feature C",
+            traditional: "Generic Approach 3",
+            tbiz: "Consectetur Adipiscing"
         },
         {
-            feature: "Sustainability",
-            traditional: "Speculative Treasury",
-            tbiz: "Sustainable Growth Model"
+            feature: "Feature D",
+            traditional: "Generic Approach 4",
+            tbiz: "Eiusmod Tempor"
         }
     ];
 
@@ -41,7 +41,7 @@ const StrategicResponse = () => {
                         viewport={{ once: true }}
                         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
                     >
-                        Our Strategic Response
+                        Lorem Ipsum Dolor Sit Amet
                     </motion.h2>
                     <motion.p
                         className={classes.subtitle}
@@ -50,7 +50,7 @@ const StrategicResponse = () => {
                         viewport={{ once: true }}
                         transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
                     >
-                        Pivoting from High-Liability Models to a Resilient, Debt-Free Institutional Standard
+                        Consectetur adipiscing elit pellentesque habitant morbi
                     </motion.p>
                 </div>
 
@@ -65,8 +65,8 @@ const StrategicResponse = () => {
                         <thead>
                             <tr>
                                 <th className={classes.th}>Metric</th>
-                                <th className={classes.th}>Traditional Model</th>
-                                <th className={`${classes.th} ${classes.thBrand}`}>TransparentBusiness Strategy</th>
+                                <th className={classes.th}>Standard Model</th>
+                                <th className={`${classes.th} ${classes.thBrand}`}>New Strategy</th>
                             </tr>
                         </thead>
                         <tbody>

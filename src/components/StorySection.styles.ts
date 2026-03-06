@@ -1,68 +1,102 @@
 import { makeStyles } from 'tss-react/mui';
 
 export const useStyles = makeStyles()((theme) => ({
-    section: {
-        paddingTop: theme.spacing(8),
-        paddingBottom: theme.spacing(8),
-        backgroundColor: '#FFFFFF', // Forza fondo blanco Apple-style
-        color: '#111827', // Texto oscuro siempre para contrastar con el blanco
-        [theme.breakpoints.up('lg')]: {
-            paddingTop: '160px',
-            paddingBottom: '160px',
+    wrapper: {
+        width: '100%',
+        backgroundColor: '#FFFFFF',
+        color: '#0B1026',
+        overflow: 'hidden',
+    },
+    sectionBlock: {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        minHeight: '100vh', // Long scroll Apple-style
+        padding: theme.spacing(12, 4),
+        [theme.breakpoints.up('md')]: {
+            padding: theme.spacing(16, 8),
         }
     },
-    container: {
-        maxWidth: '100%',
-        margin: '0 auto',
-        paddingLeft: theme.spacing(3),
-        paddingRight: theme.spacing(3),
-        [theme.breakpoints.up('lg')]: {
-            paddingLeft: '150px',
-            paddingRight: '150px',
-        }
+    bgGrayLight: {
+        backgroundColor: '#F7F9FC', // Alternating background
     },
-    innerFlex: {
+    contentWrapper: {
         display: 'flex',
         flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        width: '100%',
+        maxWidth: '1440px',
+        margin: '0 auto',
         gap: theme.spacing(8),
         [theme.breakpoints.up('lg')]: {
             flexDirection: 'row',
-            alignItems: 'flex-start',
             gap: theme.spacing(12),
+            justifyContent: 'space-between',
         }
     },
-    stickyColumn: {
+    rowNormal: {
+        // Default L-R flow
+    },
+    rowReverse: {
+        [theme.breakpoints.up('lg')]: {
+            flexDirection: 'row-reverse',
+        }
+    },
+    colNormal: {
+        flexDirection: 'column !important' as any,
+        textAlign: 'center',
+    },
+    textContent: {
         flex: 1,
+        maxWidth: '600px',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        zIndex: 2,
+    },
+    textContentCenter: {
+        alignItems: 'center',
+        textAlign: 'center',
+        maxWidth: '800px',
+    },
+    visualContent: {
+        flex: 1,
+        width: '100%',
+        position: 'relative',
+        borderRadius: '24px',
+        overflow: 'hidden',
+        boxShadow: theme.shadows[20], // Premium shadow
+        aspectRatio: '4/3', // Make images large and standard ratio
         [theme.breakpoints.up('lg')]: {
-            position: 'sticky',
-            top: '160px', /* Stays anchored near the top */
-            maxWidth: '500px',
-            paddingRight: theme.spacing(6),
+            maxWidth: '55%',
         }
     },
-    scrollColumn: {
-        flex: 1.5,
-        display: 'flex',
-        flexDirection: 'row', // Horizontal on mobile
-        gap: theme.spacing(2),
-        overflowX: 'auto',
-        overflowY: 'visible', // Must be visible to allow cards to cast shadows or just breathe vertically
-        scrollSnapType: 'x mandatory',
-        WebkitOverflowScrolling: 'touch',
-        paddingTop: theme.spacing(2), // Give space top
-        paddingBottom: theme.spacing(4), // Give space bottom
-        scrollbarWidth: 'none',
-        '&::-webkit-scrollbar': {
-            display: 'none'
-        },
-        [theme.breakpoints.up('lg')]: {
-            flexDirection: 'column', // Back to vertical on desktop
-            overflowX: 'visible',
-            scrollSnapType: 'none',
-            paddingTop: '320px', // Starts low so user scrolls into it
-            paddingBottom: '160px',
-            gap: '120px', // Massive gap on desktop
+    visualContentWide: {
+        aspectRatio: '16/9',
+        maxWidth: '1200px !important',
+        marginTop: theme.spacing(6),
+    },
+    largeImage: {
+        width: '100%',
+        height: '100%',
+        objectFit: 'cover',
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        transition: 'transform 0.7s ease',
+        '&:hover': {
+            transform: 'scale(1.03)',
         }
+    },
+    eyebrow: {
+        fontSize: '0.875rem',
+        fontWeight: 700,
+        textTransform: 'uppercase',
+        letterSpacing: '0.15em',
+        color: '#9CA3AF',
+        marginBottom: theme.spacing(3),
+        display: 'block',
     },
     title: {
         fontFamily: theme.typography.h1.fontFamily,
@@ -70,131 +104,101 @@ export const useStyles = makeStyles()((theme) => ({
         letterSpacing: '-0.03em',
         marginBottom: theme.spacing(4),
         lineHeight: 1.1,
-        fontSize: '44px',
+        fontSize: '48px',
+        color: '#111827', // Very dark gray for premium contrast
         [theme.breakpoints.up('md')]: {
             fontSize: '64px',
         },
         [theme.breakpoints.up('lg')]: {
-            fontSize: '72px',
-        }
+            fontSize: '80px',
+        },
+        textWrap: 'balance',
     },
-    subtitle: {
+    description: {
         fontSize: '1.25rem',
-        fontWeight: 700,
-        color: theme.palette.text.primary, // Dark Navy
-        lineHeight: 1.5,
-        [theme.breakpoints.up('md')]: {
-            fontSize: '1.5rem',
-        }
-    },
-    storyBlock: {
-        backgroundColor: '#F5F5F7', // Apple Light Gray Glass
-        border: '1px solid transparent',
-        backdropFilter: 'none',
-        WebkitBackdropFilter: 'none',
-        borderRadius: '32px',
-        padding: '32px 20px', // Even tighter padding for iPhones
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        minHeight: '380px', // Reduced from 400 to prevent edge clipping on smaller iPhones
-        minWidth: '85vw', // Take up most of screen on mobile
-        scrollMarginLeft: '20px',
-        boxSizing: 'border-box', // Ensure padding doesn't push width out
-        transition: 'all 0.4s ease',
-        '&:hover': {
-            transform: 'translateY(-4px)',
-            boxShadow: '0 10px 30px rgba(0,0,0,0.05)',
-        },
-        [theme.breakpoints.up('md')]: {
-            padding: '60px 40px',
-            minHeight: '400px',
-        },
-        [theme.breakpoints.up('lg')]: {
-            minWidth: 'auto', // Reset on desktop
-            scrollMarginLeft: 0,
-        }
-    },
-    chapterLabel: {
-        fontSize: '0.875rem',
-        fontWeight: 700,
-        textTransform: 'uppercase',
-        letterSpacing: '0.2em',
-        color: theme.palette.info.main, // Complementary Blue
-        marginBottom: theme.spacing(3),
-        display: 'block',
-    },
-    cardTitle: {
-        fontSize: '2rem',
-        fontWeight: 700,
-        marginBottom: theme.spacing(3),
-        letterSpacing: '-0.03em',
-        color: theme.palette.text.primary,
-        [theme.breakpoints.up('md')]: {
-            fontSize: '2.5rem',
-        }
-    },
-    cardText: {
-        fontSize: '1.125rem',
-        lineHeight: 1.7,
-        color: theme.palette.text.primary,
+        color: '#4B5563', // Slightly lighter gray for body
+        lineHeight: 1.6,
+        textWrap: 'balance',
         fontWeight: 400,
         [theme.breakpoints.up('md')]: {
-            fontSize: '1.25rem',
+            fontSize: '1.5rem', // Large typography for minimal text
         }
     },
-    highlightBlock: {
-        backgroundColor: theme.palette.primary.main,
+    ctaContainer: {
+        marginTop: theme.spacing(6),
+        display: 'flex',
+    },
+    ctaButton: {
+        backgroundColor: theme.palette.info.main,
+        color: '#0B1026',
+        padding: '16px 40px',
+        borderRadius: '40px',
+        fontWeight: 700,
+        fontSize: '1rem',
+        textTransform: 'uppercase',
+        letterSpacing: '0.05em',
+        textDecoration: 'none',
         border: 'none',
-        color: '#FFFFFF', // Always white text
-    },
-    imperativeLabel: {
-        fontSize: '0.875rem',
-        fontWeight: 700,
-        textTransform: 'uppercase',
-        letterSpacing: '0.2em',
-        color: theme.palette.secondary.main, // Brand Accent Yellow
-        marginBottom: theme.spacing(3),
-        display: 'block',
-    },
-    imperativeTitle: {
-        fontSize: '2rem',
-        fontWeight: 700,
-        marginBottom: theme.spacing(3),
-        letterSpacing: '-0.03em',
-        color: '#FFFFFF',
-        [theme.breakpoints.up('md')]: {
-            fontSize: '2.5rem',
+        cursor: 'pointer',
+        display: 'inline-block',
+        transition: 'all 0.3s ease',
+        boxShadow: theme.shadows[4],
+        '&:hover': {
+            transform: 'translateY(-2px)',
+            boxShadow: theme.shadows[8],
+            backgroundColor: '#e6bd3c',
         }
     },
-    imperativeDescription: {
-        fontSize: '1.125rem',
-        color: '#FFFFFF',
-        lineHeight: 1.7,
-        fontWeight: 400,
-        [theme.breakpoints.up('md')]: {
-            fontSize: '1.25rem',
-        }
-    },
-    scrollIndicator: {
+
+    // War on Crypto section styles
+    warSection: {
+        padding: theme.spacing(12, 4),
+        backgroundColor: '#FFFFFF',
         display: 'flex',
         justifyContent: 'center',
-        alignItems: 'center',
-        gap: '8px',
-        marginTop: theme.spacing(2),
-        [theme.breakpoints.up('lg')]: {
-            display: 'none', // Hide on desktop where it's vertical
-        }
+        borderTop: '1px solid #E5E7EB',
     },
-    dot: {
-        height: '8px',
-        width: '8px',
-        borderRadius: '4px',
-        backgroundColor: '#D1D1D6', // Light gray for inactive
+    warContainer: {
+        maxWidth: '800px',
+        textAlign: 'center',
+        padding: theme.spacing(8),
+        borderRadius: '24px',
+        backgroundColor: '#F9FAFB', // Very subtle gray
+        border: '1px solid #F3F4F6',
+    },
+    titleSmall: {
+        fontFamily: theme.typography.h2.fontFamily,
+        fontWeight: 700,
+        fontSize: '32px',
+        marginBottom: theme.spacing(2),
+        [theme.breakpoints.up('md')]: {
+            fontSize: '40px',
+        },
+        color: '#111827',
+    },
+    descriptionSmall: {
+        fontSize: '1.125rem',
+        color: '#6B7280',
+        lineHeight: 1.5,
+        marginBottom: theme.spacing(4),
+        maxWidth: '600px',
+        margin: '0 auto',
+        paddingBottom: theme.spacing(4),
+    },
+    ctaButtonOutline: {
+        display: 'inline-block',
+        padding: '12px 32px',
+        borderRadius: '40px',
+        border: '2px solid #111827',
+        color: '#111827',
+        fontWeight: 700,
+        textTransform: 'uppercase',
+        letterSpacing: '0.05em',
+        textDecoration: 'none',
         transition: 'all 0.3s ease',
-    },
-    activeDot: {
-        width: '32px', // Elongated for active
-        backgroundColor: theme.palette.primary.main, // Dark for active
+        '&:hover': {
+            backgroundColor: '#111827',
+            color: '#FFFFFF',
+        }
     }
 }));

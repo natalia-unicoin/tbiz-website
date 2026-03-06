@@ -13,15 +13,7 @@ const Hero = () => {
         <section className={classes.section}>
             {/* Background Video */}
             <div className={classes.bgWrapper}>
-                <video
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    className={classes.videoBackground}
-                >
-                    <source src={getImagePath('/assets/AdobeStock_1897137541.mov')} />
-                </video>
+                <div style={{ width: '100%', height: '100%', backgroundColor: '#0F1626' }} className={classes.videoBackground} />
                 <div className={classes.videoOverlay} />
             </div>
 
@@ -33,7 +25,7 @@ const Hero = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
                 >
-                    TransparentBusiness<br />is Evolving
+                    The Evolution of<br />a Vision
                 </motion.h1>
 
                 <motion.div
@@ -42,18 +34,8 @@ const Hero = () => {
                     transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
                 >
                     <p className={classes.subtitle}>
-                        From Unicoin to TransparentBusiness. A new chapter built on.<br />
-                        transparency, resilience, and leadership.
-                    </p>
-                </motion.div>
-
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-                >
-                    <p className={classes.description}>
-                        Evolving our institutional model to navigate the shifting regulatory landscape.
+                        From transparency in digital work to a global ecosystem<br />
+                        shaping the future of finance and technology.
                     </p>
                 </motion.div>
 
@@ -67,7 +49,7 @@ const Hero = () => {
                         onClick={() => setIsModalOpen(true)}
                         className={classes.ctaButton}
                     >
-                        Discover the Transition
+                        Begin the Journey
                     </button>
                 </motion.div>
 
@@ -96,9 +78,9 @@ const Hero = () => {
                                     <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
                                 </svg>
                             </button>
-                            <h3 className={classes.modalTitle}>Institutional Clarification</h3>
+                            <h3 className={classes.modalTitle}>Placeholder Title</h3>
                             <p className={classes.modalText}>
-                                TransparentBusiness is not merely a rebrand. It represents a structural evolution of TransparentBusiness' institutional framework. The transition reflects a strategic realignment designed to ensure regulatory clarity, protect investor interests, and strengthen long-term governance standards. This evolution positions TransparentBusiness as a forward-facing institutional platform built for transparency, resilience, and compliance in a shifting global regulatory environment.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                             </p>
                         </motion.div>
                     </motion.div>

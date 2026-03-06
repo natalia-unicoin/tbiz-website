@@ -16,19 +16,19 @@ export const useStyles = makeStyles()((theme) => ({
         position: 'absolute',
         inset: 0,
         zIndex: 0,
-        backgroundColor: theme.palette.primary.main,
+        backgroundColor: '#0F1626',
+        backgroundImage: 'url("/assets/poised-bg.jpg")', // Using an existing asset as placeholder for abstract visual
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed', // Parallax effect
     },
     videoBackground: {
-        width: '100%',
-        height: '100%',
-        objectFit: 'cover',
-        position: 'absolute',
-        inset: 0,
+        display: 'none',
     },
     videoOverlay: {
         position: 'absolute',
         inset: 0,
-        backgroundColor: 'rgba(14, 26, 43, 0.65)', // Dark blue-ish overlay for text readability
+        backgroundColor: 'rgba(14, 26, 43, 0.7)', // Slightly darker overlay for better text contrast
         zIndex: 1,
     },
     content: {
@@ -59,18 +59,20 @@ export const useStyles = makeStyles()((theme) => ({
         },
         [theme.breakpoints.up('lg')]: {
             fontSize: '84px',
-        }
+        },
+        textWrap: 'balance',
     },
     subtitle: {
         fontSize: '1.125rem', // Reduced from 1.25rem for mobile
         fontWeight: 600,
         letterSpacing: '0',
         color: '#FFFFFF', // White for video
-        marginBottom: theme.spacing(2),
+        marginBottom: theme.spacing(6), // Increased from 2 to give space before CTA
         lineHeight: 1.2,
         [theme.breakpoints.up('md')]: {
             fontSize: '1.75rem',
-        }
+        },
+        textWrap: 'balance',
     },
     description: {
         fontSize: '1rem',
@@ -95,11 +97,9 @@ export const useStyles = makeStyles()((theme) => ({
         }
     },
     ctaButton: {
-        backgroundColor: theme.palette.mode === 'dark' ? 'rgba(255, 255, 255, 0.1)' : theme.palette.secondary.main,
-        color: theme.palette.mode === 'dark' ? '#FFFFFF' : theme.palette.secondary.contrastText,
-        border: theme.palette.mode === 'dark' ? '1px solid rgba(255, 255, 255, 0.3)' : 'none',
-        backdropFilter: theme.palette.mode === 'dark' ? 'blur(16px)' : 'none',
-        WebkitBackdropFilter: theme.palette.mode === 'dark' ? 'blur(16px)' : 'none',
+        backgroundColor: theme.palette.info.main, // #FCD144
+        color: '#0B1026',
+        border: 'none',
         padding: '16px 32px', // px-8 py-4
         borderRadius: '9999px', // Pill shape
         fontSize: '0.875rem', // text-sm
@@ -111,7 +111,8 @@ export const useStyles = makeStyles()((theme) => ({
         transition: 'all 0.3s',
         '&:hover': {
             transform: 'scale(1.05)',
-            boxShadow: theme.shadows[20], // shadow-2xl
+            boxShadow: '0 0 30px rgba(252, 209, 68, 0.4)',
+            backgroundColor: '#e6bd3c',
         },
         [theme.breakpoints.up('md')]: {
             padding: '20px 40px', // px-10 py-5

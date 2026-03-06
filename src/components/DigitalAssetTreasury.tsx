@@ -10,39 +10,39 @@ const DigitalAssetTreasury = () => {
 
     const columnsData = [
         {
-            title: "Treasury Strategy",
+            title: "Lorem Ipsum 1",
             items: [
-                "Debt-free capital model",
-                "Equity swap alignment",
-                "Long-term treasury discipline",
-                "Institutional capital preservation"
+                "Dolor sit amet, consectetur",
+                "Adipiscing elit sed do",
+                "Eiusmod tempor incididunt",
+                "Ut labore et dolore magna"
             ]
         },
         {
-            title: "Asset Allocation",
+            title: "Lorem Ipsum 2",
             items: [
-                "Digital asset exposure strategy",
-                "Real asset alignment",
-                "Liquidity management framework",
-                "Volatility mitigation discipline"
+                "Aliqua ut enim ad minim",
+                "Veniam quis nostrud",
+                "Exercitation ullamco laboris",
+                "Nisi ut aliquip ex ea"
             ]
         },
         {
-            title: "Risk Management",
+            title: "Lorem Ipsum 3",
             items: [
-                "Regulatory alignment protocol",
-                "Compliance-first governance",
-                "Multi-layer risk mitigation",
-                "SEC-responsive structural discipline"
+                "Commodo consequat duis",
+                "Aute irure dolor in",
+                "Reprehenderit in voluptate",
+                "Velit esse cillum dolore"
             ]
         },
         {
-            title: "Reporting Standards",
+            title: "Lorem Ipsum 4",
             items: [
-                "Quarterly reporting commitment",
-                "Treasury performance metrics",
-                "Transparency framework",
-                "Institutional accountability model"
+                "Eu fugiat nulla pariatur",
+                "Excepteur sint occaecat",
+                "Cupidatat non proident",
+                "Sunt in culpa qui officia"
             ]
         }
     ];
@@ -59,13 +59,13 @@ const DigitalAssetTreasury = () => {
                     transition={{ duration: 0.8 }}
                 >
                     <span className={classes.eyebrow}>
-                        Institutional Framework
+                        Consectetur Adipiscing
                     </span>
                     <h2 className={classes.title}>
-                        Digital Asset Treasury
+                        Lorem Ipsum Dolor
                     </h2>
                     <p className={classes.subtitle}>
-                        A Debt-Free Institutional Framework for Strategic Capital Preservation
+                        Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
                     </p>
                 </motion.div>
 

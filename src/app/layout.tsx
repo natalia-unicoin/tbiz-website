@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 // import "./globals.css"; // Commented out for MUI migration
 import ThemeRegistry from "@/theme/ThemeRegistry";
 import { ThemeProviderWrapper } from "@/context/ThemeContext";
-import ThemeSwitcher from "@/components/ThemeSwitcher";
 import { ModalProvider } from "@/context/ModalContext";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -27,7 +26,6 @@ export default function RootLayout({
         <ThemeProviderWrapper>
           <ThemeRegistry>
             <ModalProvider>
-              <ThemeSwitcher />
               <GlassBackground />
               <Navbar />
               {children}

@@ -9,20 +9,20 @@ const Financials = () => {
 
     const dataCards = [
         {
-            value: "$1.2B",
-            description: "Total Assets Value in Treasury Performance Overview",
+            value: "000",
+            description: "Lorem Ipsum Dolor Sit Amet Consectetur",
         },
         {
-            value: "100%",
-            description: "Debt-Free Ratio Capital Structure Summary",
+            value: "00%",
+            description: "Adipiscing Elit Sed Do Eiusmod Tempor",
         },
         {
-            value: "Q4",
-            description: "FY 2025 Release Quarterly Reports",
+            value: "XX",
+            description: "Incididunt Ut Labore Et Dolore Magna",
         },
         {
-            value: "SEC",
-            description: "Regulatory Alignment Disclosure Statements",
+            value: "LIP",
+            description: "Aliqua Ut Enim Ad Minim Veniam",
         }
     ];
 
@@ -37,7 +37,7 @@ const Financials = () => {
                     transition={{ duration: 0.8 }}
                 >
                     <h2 className={classes.title}>
-                        Financials
+                        Lorem Ipsum
                     </h2>
                 </motion.div>
 

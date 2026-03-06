@@ -5,7 +5,7 @@ import { motion, useScroll, useTransform, MotionValue } from 'framer-motion';
 import { getImagePath } from '@/utils/image';
 import { useStyles } from './PositionedEra.styles';
 
-const text = "The transition to TransparentBusiness marks a deliberate move toward institutional maturity. Built on a debt-free model, strategic asset alignment, and disciplined governance, TransparentBusiness is structured to operate within evolving regulatory frameworks while maintaining strategic independence. This is not a reactionary shift, but a forward-looking institutional recalibration designed for longevity.";
+const text = "Today the vision continues with TransparentBusiness. Unicoin Inc now operates as TransparentBusiness, representing the evolution of a broader mission: building transparency across digital work, finance and global organizations.";
 
 const Word = ({ children, progress, range }: { children: string, progress: MotionValue<number>, range: [number, number] }) => {
     const opacity = useTransform(progress, range, [0.15, 1]);
@@ -39,7 +39,7 @@ const PositionedEra = () => {
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
                     >
-                        Positioned for the Next Era
+                        The Evolution Continues
                     </motion.h2>
 
                     <p className={classes.description}>
@@ -49,6 +49,18 @@ const PositionedEra = () => {
                             return <Word key={i} progress={scrollYProgress} range={[start, end]}>{word}</Word>
                         })}
                     </p>
+
+                    <motion.ul
+                        style={{ marginTop: '48px', listStyleType: 'disc', paddingLeft: '20px', color: '#E6E8EB', fontSize: '1.25rem', display: 'flex', flexDirection: 'column', gap: '16px' }}
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8, delay: 0.4 }}
+                    >
+                        <li>Digital transparency infrastructure</li>
+                        <li>Global ecosystem of companies</li>
+                        <li>Technology for the future economy</li>
+                    </motion.ul>
                 </div>
             </div>
         </section>

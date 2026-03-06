@@ -19,16 +19,10 @@ export const ThemeProviderWrapper = ({ children }: { children: ReactNode }) => {
     // Evitamos problemas de hydratación asegurándonos de que corre en el cliente
     useEffect(() => {
         setMounted(true);
-        // Intentar recuperar el tema guardado
-        const savedTheme = localStorage.getItem('UNIC_APP_THEME') as ThemeMode;
-        if (savedTheme && ['tbiz', 'light', 'safebets', 'glass'].includes(savedTheme)) {
-            setActiveThemeState(savedTheme);
-        }
     }, []);
 
     const setTheme = (mode: ThemeMode) => {
-        setActiveThemeState(mode);
-        localStorage.setItem('UNIC_APP_THEME', mode);
+        // Disabled for TBIZ single theme structure
     };
 
     // Remove the early return so the Provider is always in the tree on the server to prevent context errors.

@@ -9,40 +9,40 @@ const InvestorRelations = () => {
 
     const dataCards = [
         {
-            title: "Investor Deck",
+            title: "Lorem Ipsum 1",
             items: [
-                "Comprehensive strategic review",
-                "Financial projections model",
-                "Market positioning analysis"
+                "Dolor sit amet",
+                "Consectetur adipiscing elit",
+                "Sed do eiusmod tempor"
             ],
-            actionText: "Download Deck"
+            actionText: "Action Text"
         },
         {
-            title: "Contact IR",
+            title: "Lorem Ipsum 2",
             items: [
-                "Direct institutional access",
-                "Dedicated relationship manager",
-                "Priority response timeline"
+                "Incididunt ut labore",
+                "Et dolore magna aliqua",
+                "Ut enim ad minim veniam"
             ],
-            actionText: "Get in Touch"
+            actionText: "Action Text"
         },
         {
-            title: "Institutional FAQs",
+            title: "Lorem Ipsum 3",
             items: [
-                "Capital structure methodology",
-                "Risk and governance framework",
-                "Treasury deployment parameters"
+                "Quis nostrud exercitation",
+                "Ullamco laboris nisi",
+                "Ut aliquip ex ea commodo"
             ],
-            actionText: "View FAQs"
+            actionText: "Action Text"
         },
         {
-            title: "Analyst Inquiry",
+            title: "Lorem Ipsum 4",
             items: [
-                "Custom data requests",
-                "Management interview protocol",
-                "Detailed performance metrics"
+                "Consequat duis aute irure",
+                "Dolor in reprehenderit in",
+                "Voluptate velit esse cillum"
             ],
-            actionText: "Submit Inquiry"
+            actionText: "Action Text"
         }
     ];
 
@@ -57,7 +57,7 @@ const InvestorRelations = () => {
                     transition={{ duration: 0.8 }}
                 >
                     <h2 className={classes.title}>
-                        Investor Relations
+                        Lorem Ipsum Dolor
                     </h2>
                 </motion.div>
 

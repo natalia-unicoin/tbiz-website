@@ -51,6 +51,7 @@ export const useStyles = makeStyles()((theme) => ({
             fontSize: '72px',
         },
         color: '#FFFFFF',
+        textWrap: 'balance',
     },
     subtitle: {
         fontSize: '18px',
@@ -62,15 +63,14 @@ export const useStyles = makeStyles()((theme) => ({
         fontWeight: 700,
         [theme.breakpoints.up('md')]: {
             fontSize: '24px',
-        }
+        },
+        textWrap: 'balance',
     },
     button: {
         display: 'inline-block',
-        backgroundColor: theme.palette.mode === 'dark' ? 'rgba(255, 255, 255, 0.1)' : theme.palette.secondary.main,
-        color: theme.palette.mode === 'dark' ? '#FFFFFF' : theme.palette.secondary.contrastText,
-        border: theme.palette.mode === 'dark' ? '1px solid rgba(255, 255, 255, 0.3)' : 'none',
-        backdropFilter: theme.palette.mode === 'dark' ? 'blur(16px)' : 'none',
-        WebkitBackdropFilter: theme.palette.mode === 'dark' ? 'blur(16px)' : 'none',
+        backgroundColor: theme.palette.info.main, // #FCD144
+        color: '#0B1026',
+        border: 'none',
         padding: '20px 48px',
         borderRadius: '9999px', // Pill shape
         fontSize: '16px',
@@ -81,8 +81,8 @@ export const useStyles = makeStyles()((theme) => ({
         transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
         '&:hover': {
             transform: 'scale(1.05)',
-            boxShadow: theme.palette.mode === 'dark' ? '0 0 30px rgba(6, 182, 212, 0.4)' : '0 0 30px rgba(255,255,255,0.3)',
-            backgroundColor: theme.palette.mode === 'dark' ? 'rgba(255, 255, 255, 0.2)' : undefined,
+            boxShadow: '0 0 30px rgba(252, 209, 68, 0.4)',
+            backgroundColor: '#e6bd3c',
         }
     },
     bgAccent: {

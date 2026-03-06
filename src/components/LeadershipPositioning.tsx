@@ -5,12 +5,12 @@ import { motion } from 'framer-motion';
 import { useStyles } from './LeadershipPositioning.styles';
 
 const stats = [
-    { value: "$100M", label: "Capital Raised" },
-    { value: "$3B", label: "Real Estate Swaps" },
-    { value: "GLOBAL", label: "Brand Visibility" },
-    { value: "UNIVERSE", label: "Unicorn Hunters Distribution" },
-    { value: "ELITE", label: "Leadership Team Strength" },
-    { value: "#1", label: "Market Positioning" }
+    { value: "XX", label: "Lorem Ipsum" },
+    { value: "YY", label: "Dolor Sit Amet" },
+    { value: "WORD", label: "Consectetur Adipiscing" },
+    { value: "KEY", label: "Elit Sed Do Eiusmod" },
+    { value: "000", label: "Tempor Incididunt" },
+    { value: "#0", label: "Ut Labore Et Dolore" }
 ];
 
 const LeadershipPositioning = () => {
@@ -26,7 +26,7 @@ const LeadershipPositioning = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.8 }}
                 >
-                    Why We Were Poised to Lead
+                    Lorem Ipsum Dolor
                 </motion.h2>
 
                 <div className={classes.grid}>

@@ -4,25 +4,11 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useStyles } from './InTheMedia.styles';
 
-const mediaItems = [
-    {
-        tag: "Leadership Interview",
-        title: "Entrepreneurship with AI: A New Vision",
-        excerpt: "Silvina Moschini shares strategic recommendations for the next era of AI-driven business leadership and social product innovation.",
-        source: "Sale el Sol"
-    },
-    {
-        tag: "Strategic PR",
-        title: "The Mockumentary: A Pragmatic Offensive",
-        excerpt: "Reframing the crypto industry conflict through documentary-style narrative tactics as a major trend in corporate communication.",
-        source: "Industry Insight"
-    },
-    {
-        tag: "Regulatory Shift",
-        title: "Regulation vs innovation: The Institutional Stakes",
-        excerpt: "Analyzing the impact of restrictive regulatory maneuvers on emerging digital asset ecosystems and global market stability.",
-        source: "Global Finance"
-    }
+const logos = [
+    { name: "Forbes", width: 120 },
+    { name: "Wall Street Journal", width: 160 },
+    { name: "Fortune", width: 130 },
+    { name: "Global Events", width: 140 }
 ];
 
 const InTheMedia = () => {
@@ -31,30 +17,44 @@ const InTheMedia = () => {
     return (
         <section className={classes.section} id="media">
             <div className={classes.container}>
-                <motion.h2
-                    className={classes.title}
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.8 }}
-                >
-                    In the Media
-                </motion.h2>
+                <div style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto 64px' }}>
+                    <motion.h2
+                        className={classes.title}
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8 }}
+                    >
+                        Global Recognition
+                    </motion.h2>
+                    <motion.p
+                        style={{ fontSize: '1.25rem', color: '#6B7280', lineHeight: 1.6 }}
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8, delay: 0.1 }}
+                    >
+                        Over the years, the ecosystem and its companies have been featured across leading global media outlets and industry events.
+                    </motion.p>
+                </div>
 
-                <div className={classes.grid}>
-                    {mediaItems.map((item, index) => (
+                <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center', gap: '48px', opacity: 0.6 }}>
+                    {logos.map((logo, index) => (
                         <motion.div
                             key={index}
-                            className={classes.mediaCard}
-                            initial={{ opacity: 0, y: 40 }}
+                            style={{
+                                fontWeight: 600,
+                                fontSize: '1.5rem',
+                                color: '#374151',
+                                letterSpacing: '-0.02em'
+                            }}
+                            initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.6, delay: index * 0.1 }}
                         >
-                            <span className={classes.tag}>{item.tag}</span>
-                            <h3 className={classes.mediaTitle}>{item.title}</h3>
-                            <p className={classes.excerpt}>{item.excerpt}</p>
-                            <div className={classes.source}>{item.source}</div>
+                            {/* TODO: Replace text with actual SVG logos later */}
+                            {logo.name}
                         </motion.div>
                     ))}
                 </div>

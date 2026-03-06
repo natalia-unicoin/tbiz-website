@@ -5,11 +5,8 @@ import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import NextAppDirEmotionCacheProvider from './EmotionCache';
 import getTheme from './theme';
-import { useThemeContext } from '@/context/ThemeContext';
-
 export default function ThemeRegistry({ children }: { children: React.ReactNode }) {
-    const { activeTheme } = useThemeContext();
-    const currentTheme = React.useMemo(() => getTheme(activeTheme), [activeTheme]);
+    const currentTheme = React.useMemo(() => getTheme(), []);
 
     return (
         <NextAppDirEmotionCacheProvider options={{ key: 'mui' }}>

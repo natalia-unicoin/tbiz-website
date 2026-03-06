@@ -13,11 +13,10 @@ const WarOnInnovation = () => {
                 {/* Eyebrow - "macOS" equivalent */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-100px" }}
                     transition={{ duration: 0.6 }}
                 >
-                    <h3 className={classes.eyebrow}>The War On Innovation</h3>
+                    <h3 className={classes.eyebrow}>The War on Crypto</h3>
                 </motion.div>
 
                 {/* Main Title - "Smooth operator" equivalent */}
@@ -28,7 +27,7 @@ const WarOnInnovation = () => {
                     transition={{ duration: 0.8, delay: 0.1 }}
                 >
                     <h2 className={classes.mainTitle}>
-                        <span className={classes.accent}>Regulatory volatility</span> stress-tested our institutional framework.
+                        <span className={classes.accent}>A Stand</span> for Transparency
                     </h2>
                 </motion.div>
 
@@ -40,7 +39,7 @@ const WarOnInnovation = () => {
                     transition={{ duration: 0.8, delay: 0.2 }}
                 >
                     <p className={classes.description}>
-                        For many participants, this period represented not only financial instability but also a loss of strategic momentum. Our response was guided by one priority: protecting stakeholders while preserving long-term institutional viability through a debt-free model.
+                        As the ecosystem grew, it faced regulatory challenges that became known as the War on Crypto — a defining moment in the fight for innovation and transparency in digital finance.
                     </p>
                 </motion.div>
 
@@ -53,17 +52,17 @@ const WarOnInnovation = () => {
                     transition={{ duration: 0.8, delay: 0.4 }}
                 >
                     <div className={classes.metricItem}>
-                        <span className={classes.metricValue}>$1T+</span>
-                        <span className={classes.metricLabel}>Market Value Impact</span>
+                        <span className={classes.metricValue}>Battle</span>
+                        <span className={classes.metricLabel}>Regulatory<br />Defense</span>
                     </div>
                     <div className={classes.metricDivider} />
                     <div className={classes.metricItem}>
-                        <span className={classes.metricValue}>Thousands</span>
-                        <span className={classes.metricLabel}>Investors Impacted</span>
+                        <span className={classes.metricValue}>Impact</span>
+                        <span className={classes.metricLabel}>Industry-wide<br />Innovation</span>
                     </div>
                 </motion.div>
             </div>
-        </section>
+        </section >
     );
 };
 
