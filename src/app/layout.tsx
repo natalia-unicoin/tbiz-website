@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-// import "./globals.css"; // Commented out for MUI migration
+import { Inter, Montserrat } from 'next/font/google';
+import "./globals.css"; // Ensure globals are loaded for Tailwind and basic resets
 import ThemeRegistry from "@/theme/ThemeRegistry";
 import { ThemeProviderWrapper } from "@/context/ThemeContext";
 import { ModalProvider } from "@/context/ModalContext";
@@ -8,6 +9,9 @@ import Footer from "@/components/Footer";
 import JoinModal from "@/components/JoinModal";
 import ManifestoModal from "@/components/ManifestoModal";
 import GlassBackground from "@/components/GlassBackground";
+
+const inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'swap' });
+const montserrat = Montserrat({ subsets: ['latin'], variable: '--font-montserrat', display: 'swap' });
 
 export const metadata: Metadata = {
   title: "TransparentBusiness: The Debt-Free Evolution of Digital Asset Treasury",
@@ -22,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="antialiased selection:bg-[#EBE563] selection:text-black">
+      <body className={`${inter.variable} ${montserrat.variable} font-sans antialiased selection:bg-[#EBE563] selection:text-black`}>
         <ThemeProviderWrapper>
           <ThemeRegistry>
             <ModalProvider>

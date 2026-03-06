@@ -31,50 +31,50 @@ const getPalette = () => {
 const getTheme = () => createTheme({
     palette: getPalette(),
     typography: {
-        fontFamily: inter.style.fontFamily,
+        fontFamily: 'var(--font-inter), sans-serif',
         h1: {
-            fontFamily: montserrat.style.fontFamily,
+            fontFamily: 'var(--font-montserrat), sans-serif',
             fontWeight: 700,
             lineHeight: 1.1,
             letterSpacing: '-1px',
         },
         h2: {
-            fontFamily: montserrat.style.fontFamily,
+            fontFamily: 'var(--font-montserrat), sans-serif',
             fontWeight: 700,
             letterSpacing: '-1px',
         },
         h3: {
-            fontFamily: montserrat.style.fontFamily,
+            fontFamily: 'var(--font-montserrat), sans-serif',
             fontWeight: 700,
             letterSpacing: '-1px',
         },
         h4: {
-            fontFamily: montserrat.style.fontFamily,
+            fontFamily: 'var(--font-montserrat), sans-serif',
             fontWeight: 700,
             letterSpacing: '-1px',
         },
         h5: {
-            fontFamily: montserrat.style.fontFamily,
+            fontFamily: 'var(--font-montserrat), sans-serif',
             fontWeight: 700,
             letterSpacing: '-1px',
         },
         h6: {
-            fontFamily: montserrat.style.fontFamily,
+            fontFamily: 'var(--font-montserrat), sans-serif',
             fontWeight: 700,
             letterSpacing: '-1px',
         },
         body1: {
-            fontFamily: inter.style.fontFamily,
+            fontFamily: 'var(--font-inter), sans-serif',
             fontSize: '18px',
             lineHeight: 1.6,
         },
         body2: {
-            fontFamily: inter.style.fontFamily,
+            fontFamily: 'var(--font-inter), sans-serif',
             fontSize: '18px',
             lineHeight: 1.6,
         },
         subtitle1: {
-            fontFamily: inter.style.fontFamily,
+            fontFamily: 'var(--font-inter), sans-serif',
             fontSize: '18px',
             lineHeight: 1.6,
         }
@@ -83,7 +83,7 @@ const getTheme = () => createTheme({
         MuiCssBaseline: {
             styleOverrides: `
                 h1, h2, h3, h4, h5, h6 {
-                    font-family: ${montserrat.style.fontFamily} !important;
+                    font-family: var(--font-montserrat), sans-serif !important;
                     font-weight: 700 !important;
                     letter-spacing: -1px !important;
                 }
