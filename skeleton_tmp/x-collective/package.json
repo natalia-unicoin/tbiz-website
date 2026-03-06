@@ -1,0 +1,59 @@
+{
+  "name": "x-collective",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "postbuild": "next-sitemap",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/cache": "^11.7.1",
+    "@emotion/react": "^11.7.1",
+    "@emotion/server": "^11.4.0",
+    "@emotion/styled": "^11.6.0",
+    "@hookform/resolvers": "^2.8.8",
+    "@mui/material": "^5.4.1",
+    "@mui/system": "^5.8.1",
+    "@mui/x-date-pickers": "^5.0.2",
+    "@next/bundle-analyzer": "15.1.5",
+    "@tbiz/tb-types": "^1.1.5",
+    "axios": "^0.26.0",
+    "dayjs": "^1.11.19",
+    "dompurify": "^3.2.5",
+    "framer-motion": "^12.23.26",
+    "lucide-react": "^0.559.0",
+    "next": "15.1.5",
+    "next-i18next": "^11.0.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-google-recaptcha-v3": "^1.9.7",
+    "react-hook-form": "^7.27.0",
+    "react-markdown": "^9.0.3",
+    "react-player": "^2.9.0",
+    "react-scroll": "^1.8.6",
+    "sharp": "^0.30.7",
+    "storeon": "^3.1.4",
+    "tss-react": "^4.9.14",
+    "yup": "^1.6.1"
+  },
+  "devDependencies": {
+    "@types/dompurify": "^3.2.0",
+    "@types/gtag.js": "^0.0.12",
+    "@types/node": "17.0.23",
+    "@types/react": "19.0.7",
+    "@types/react-scroll": "^1.8.3",
+    "@typescript-eslint/eslint-plugin": "^5.20.0",
+    "@typescript-eslint/parser": "^5.20.0",
+    "eslint": "^8.12.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-next": "15.1.5",
+    "eslint-plugin-react": "^7.29.4",
+    "next-sitemap": "^3.1.17",
+    "typescript": "^5.7.3"
+  },
+  "overrides": {
+    "@types/react": "19.0.7"
+  }
+}

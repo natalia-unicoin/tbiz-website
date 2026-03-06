@@ -1,0 +1,77 @@
+options:
+  docker: true
+  size: 2x
+
+definitions:
+  build-image: &BuildImage
+    name: Build Image
+    services:
+      - docker
+    caches:
+      - docker
+    script:
+      - printenv | grep -i ${BITBUCKET_BRANCH}_NEXT_PUBLIC_ | sed "s/${BITBUCKET_BRANCH}_//gI" > .env.local
+      - cat .env.local
+      - ls -a
+      - IMAGE_NAME=$BITBUCKET_REPO_SLUG
+      - docker build . --file Dockerfile --tag ${IMAGE_NAME}:${BITBUCKET_BUILD_NUMBER} --build-arg NPM_TOKEN=$NPM_TOKEN
+      - docker save ${IMAGE_NAME}:${BITBUCKET_BUILD_NUMBER} --output "${IMAGE_NAME}.${BITBUCKET_BUILD_NUMBER}.tar"
+    artifacts:
+      - "*.tar"
+
+  push-image: &PushImage
+    name: Push Image
+    services:
+      - docker
+    caches:
+      - docker
+    clone:
+      enabled: false
+    script:
+      - echo ${DOCKER_HUB_PASSWORD} | docker login --username "$DOCKER_HUB_USER" --password-stdin
+      - IMAGE_NAME=$BITBUCKET_REPO_SLUG
+      - docker load --input "${IMAGE_NAME}.${BITBUCKET_BUILD_NUMBER}.tar"
+      - docker tag "${IMAGE_NAME}:${BITBUCKET_BUILD_NUMBER}" "${DOCKER_CUSTOM_IMAGE_NAME}:${BITBUCKET_BRANCH//\//-}"
+      - docker push "${DOCKER_CUSTOM_IMAGE_NAME}:${BITBUCKET_BRANCH//\//-}"
+
+  restart-develop: &RestartDevelop
+    name: Restart Development Instance
+    clone:
+      enabled: false
+    artifacts:
+      download: false
+    image: atlassian/default-image:3
+    deployment: Staging
+    script:
+      - curl -X POST $AZURE_CI_WEBHOOK -H -d --header "Content-Length:0"
+  
+  restart-production: &RestartProduction
+    name: Restart Production Instance
+    clone:
+      enabled: false
+    artifacts:
+      download: false
+    image: atlassian/default-image:3
+    deployment: Production
+    script:
+      - curl -X POST $AZURE_CI_WEBHOOK -H -d --header "Content-Length:0"
+
+  services:
+    docker:
+      memory: 4096
+
+pipelines:
+  branches:
+    dev:
+      - step: *BuildImage
+      - step: *PushImage
+      - step: *RestartDevelop
+    master:
+      - step: *BuildImage
+      - step: *PushImage
+      - step: *RestartProduction
+
+  #TODO: Testing steps for pull requests
+  #pull-requests:
+  #  '**':
+  #    - step: *BuildImage
