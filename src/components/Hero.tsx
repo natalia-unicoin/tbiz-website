@@ -21,7 +21,7 @@ const Hero = () => {
             <div className={classes.content}>
                 <motion.h1
                     className={classes.title}
-                    initial={{ opacity: 0, y: 30 }}
+                    initial={{ y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
                 >
@@ -29,7 +29,7 @@ const Hero = () => {
                 </motion.h1>
 
                 <motion.div
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
                 >
@@ -40,7 +40,7 @@ const Hero = () => {
                 </motion.div>
 
                 <motion.div
-                    initial={{ opacity: 0, y: 30 }}
+                    initial={{ y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
                     className={classes.ctaContainer}

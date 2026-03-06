@@ -15,7 +15,7 @@ const FinalCTA = () => {
             <div className={classes.container}>
                 <motion.h2
                     className={classes.title}
-                    initial={{ opacity: 0, y: 40 }}
+                    initial={{ y: 40 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
@@ -32,7 +32,7 @@ const FinalCTA = () => {
                         marginTop: '48px',
                         textAlign: 'left'
                     }}
-                    initial={{ opacity: 0, y: 30 }}
+                    initial={{ y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
