@@ -10,7 +10,7 @@ export default function ThemeRegistry({ children }: { children: React.ReactNode 
     const currentTheme = React.useMemo(() => getTheme(), []);
 
     return (
-        <AppRouterCacheProvider options={{ enableCssLayer: true }}>
+        <AppRouterCacheProvider>
             <ThemeProvider theme={currentTheme}>
                 <CssBaseline />
                 {children}
