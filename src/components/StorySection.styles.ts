@@ -7,78 +7,41 @@ export const useStyles = makeStyles()((theme) => ({
         color: '#0B1026',
         overflow: 'hidden',
     },
-    sectionBlock: {
+    section: {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        minHeight: '100vh', // Long scroll Apple-style
+        minHeight: '80vh',
         padding: theme.spacing(12, 4),
         [theme.breakpoints.up('md')]: {
             padding: theme.spacing(16, 8),
         }
     },
-    bgGrayLight: {
-        backgroundColor: '#F7F9FC', // Alternating background
-    },
-    contentWrapper: {
+    container: {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
         width: '100%',
-        maxWidth: '1440px',
+        maxWidth: '1000px', // Constrain width for readable text lines
         margin: '0 auto',
         gap: theme.spacing(8),
-        [theme.breakpoints.up('lg')]: {
-            flexDirection: 'row',
-            gap: theme.spacing(12),
-            justifyContent: 'space-between',
-        }
-    },
-    rowNormal: {
-        // Default L-R flow
-    },
-    rowReverse: {
-        [theme.breakpoints.up('lg')]: {
-            flexDirection: 'row-reverse',
-        }
-    },
-    colNormal: {
-        flexDirection: 'column !important' as any,
-        textAlign: 'center',
     },
     textContent: {
-        flex: 1,
-        maxWidth: '800px', // increased from 600px to give centered text more room
         display: 'flex',
         flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center', // added center alignment explicitly
-        textAlign: 'center', // explicitly Center
-        zIndex: 2,
-        margin: '0 auto', // ensure block is centered
-    },
-    textContentCenter: {
         alignItems: 'center',
         textAlign: 'center',
-        maxWidth: '800px',
+        zIndex: 2,
     },
     visualContent: {
-        flex: 1,
         width: '100%',
         position: 'relative',
         borderRadius: '24px',
         overflow: 'hidden',
-        boxShadow: theme.shadows[20], // Premium shadow
-        aspectRatio: '4/3', // Make images large and standard ratio
-        [theme.breakpoints.up('lg')]: {
-            maxWidth: '55%',
-        }
-    },
-    visualContentWide: {
-        aspectRatio: '16/9',
-        maxWidth: '1200px !important',
-        marginTop: theme.spacing(6),
+        boxShadow: theme.shadows[20],
+        aspectRatio: '16/9', // Universal wide ratio for all timeline blocks
+        maxWidth: '1000px',
     },
     largeImage: {
         width: '100%',
@@ -120,28 +83,37 @@ export const useStyles = makeStyles()((theme) => ({
         fontWeight: 400,
     },
     ctaContainer: {
-        marginTop: theme.spacing(6),
+        marginTop: theme.spacing(5),
         display: 'flex',
+        justifyContent: 'center',
     },
     ctaButton: {
-        backgroundColor: theme.palette.info.main,
-        color: '#0B1026',
-        padding: '16px 40px',
-        borderRadius: '40px',
+        display: 'inline-flex',
+        alignItems: 'center',
+        gap: '8px',
         fontWeight: 700,
-        fontSize: '1rem',
-        textTransform: 'uppercase',
+        fontSize: '0.875rem',
         letterSpacing: '0.05em',
+        textTransform: 'uppercase',
+        color: '#111827', // Dark text as requested
+        backgroundColor: '#FCD144', // Main yellow
+        padding: '16px 36px',
+        borderRadius: '40px',
         textDecoration: 'none',
-        border: 'none',
-        cursor: 'pointer',
-        display: 'inline-block',
         transition: 'all 0.3s ease',
-        boxShadow: theme.shadows[4],
+        fontFamily: "'Inter', sans-serif !important",
+        boxShadow: '0 4px 14px rgba(252, 209, 68, 0.4)',
+        cursor: 'pointer',
         '&:hover': {
             transform: 'translateY(-2px)',
-            boxShadow: theme.shadows[8],
-            backgroundColor: '#e6bd3c',
+            boxShadow: '0 6px 20px rgba(252, 209, 68, 0.6)',
+            backgroundColor: '#EBE563' // Slightly lighter hover
+        },
+        '& svg': {
+            transition: 'transform 0.3s ease'
+        },
+        '&:hover svg': {
+            transform: 'translateX(4px)'
         }
     },
 

@@ -83,69 +83,66 @@ const StorySection = () => {
     return (
         <div id="story" className={classes.wrapper}>
             {storyBlocks.map((block, index) => {
-                const isBgGray = index % 2 !== 0; // Alternating subtle backgrounds
+                const bgColors = ['#FFFFFF', '#F9F9F9', '#F7F9FC'];
+                const currentBg = bgColors[index % 3];
 
                 return (
-                    <section
-                        key={block.id}
-                        className={cx(
-                            classes.sectionBlock,
-                            isBgGray && classes.bgGrayLight
-                        )}
-                    >
-                        <div className={cx(
-                            classes.contentWrapper,
-                            block.layout === 'split-right' ? classes.rowReverse : classes.rowNormal,
-                            block.layout === 'hero-image' ? classes.colNormal : null
-                        )}>
+                    <section key={block.id} className={classes.section} style={{ backgroundColor: currentBg }}>
+                        <div className={classes.container}>
 
-                            {/* Text Content */}
-                            <div className={cx(
-                                classes.textContent,
-                                block.layout === 'hero-image' && classes.textContentCenter
-                            )}>
+                            {/* Text Content (Always first and centered) */}
+                            <motion.div
+                                className={classes.textContent}
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true, margin: "-100px" }}
+                                transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+                            >
+                                <span className={classes.eyebrow}>
+                                    {block.highlight ? (
+                                        <span style={{ color: '#009EE3' }}>{block.highlight}</span>
+                                    ) : block.eyebrow}
+                                </span>
+
+                                <h2 className={classes.title}>{block.title}</h2>
+                                <p className={classes.description}>{block.description}</p>
+                            </motion.div>
+
+                            {/* Optional Visual Content */}
+                            {block.image && (
                                 <motion.div
-                                    initial={{ y: 30 }}
+                                    className={classes.visualContent}
+                                    initial={{ scale: 0.95, opacity: 0 }}
+                                    whileInView={{ opacity: 1, scale: 1 }}
+                                    viewport={{ once: true, margin: "-100px" }}
+                                    transition={{ duration: 1, ease: "easeOut" }}
+                                >
+                                    <img
+                                        src={getImagePath(block.image)}
+                                        alt={block.title}
+                                        className={classes.largeImage}
+                                    />
+                                </motion.div>
+                            )}
+
+                            {/* Optional CTA */}
+                            {block.cta && (
+                                <motion.div
+                                    className={classes.ctaContainer}
+                                    initial={{ opacity: 0, y: 20 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true, margin: "-100px" }}
-                                    transition={{ duration: 0.8, ease: "easeOut" }}
+                                    transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
                                 >
-                                    <span className={classes.eyebrow}>
-                                        {block.highlight || block.eyebrow}
-                                    </span>
-                                    <h2 className={classes.title}>
-                                        {block.title}
-                                    </h2>
-                                    <p className={classes.description}>
-                                        {block.description}
-                                    </p>
-                                    {block.cta && (
-                                        <div className={classes.ctaContainer}>
-                                            <a href={block.cta.link} target="_blank" rel="noopener noreferrer" className={classes.ctaButton}>
-                                                {block.cta.text}
-                                            </a>
-                                        </div>
-                                    )}
+                                    <a href={block.cta.link} target="_blank" rel="noopener noreferrer" className={classes.ctaButton}>
+                                        {block.cta.text}
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                                            <polyline points="12 5 19 12 12 19"></polyline>
+                                        </svg>
+                                    </a>
                                 </motion.div>
-                            </div>
-
-                            {/* Visual Content */}
-                            <motion.div
-                                className={cx(
-                                    classes.visualContent,
-                                    block.layout === 'hero-image' && classes.visualContentWide
-                                )}
-                                initial={{ scale: 0.95 }}
-                                whileInView={{ opacity: 1, scale: 1 }}
-                                viewport={{ once: true, margin: "-100px" }}
-                                transition={{ duration: 1, ease: "easeOut" }}
-                            >
-                                <img
-                                    src={getImagePath(block.image)}
-                                    alt={block.title}
-                                    className={classes.largeImage}
-                                />
-                            </motion.div>
+                            )}
 
                         </div>
                     </section>

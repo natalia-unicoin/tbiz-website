@@ -92,26 +92,39 @@ export const useStyles = makeStyles()((theme) => ({
         }
     },
     ctaButton: {
-        backgroundColor: theme.palette.info.main, // #FCD144
-        color: '#0B1026',
-        border: 'none',
-        padding: '16px 32px', // px-8 py-4
-        borderRadius: '9999px', // Pill shape
-        fontSize: '0.875rem', // text-sm
-        fontWeight: 700,
-        letterSpacing: '0.1em', // tracking-widest
+        backgroundColor: '#FCD144',
+        color: '#111827', // Very dark text
+        fontWeight: '700 !important' as any,
+        fontSize: '15px',
+        padding: '16px 36px',
+        borderRadius: '30px',
         textTransform: 'uppercase',
+        letterSpacing: '1px',
+        border: 'none',
         cursor: 'pointer',
-        boxShadow: theme.shadows[10], // shadow-xl approximately
-        transition: 'all 0.3s',
-        '&:hover': {
-            transform: 'scale(1.05)',
-            boxShadow: '0 0 30px rgba(252, 209, 68, 0.4)',
-            backgroundColor: '#e6bd3c',
+        transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)',
+        backdropFilter: 'blur(10px)',
+        position: 'relative',
+        overflow: 'hidden',
+        fontFamily: "'Inter', sans-serif !important",
+        '&::before': {
+            content: '""',
+            position: 'absolute',
+            top: 0,
+            left: '-100%',
+            width: '100%',
+            height: '100%',
+            background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent)',
+            transition: 'left 0.5s ease',
         },
-        [theme.breakpoints.up('md')]: {
-            padding: '20px 40px', // px-10 py-5
-            fontSize: '1rem', // text-base
+        '&:hover': {
+            backgroundColor: '#EBE563', // Slightly lighter highlight
+            transform: 'translateY(-2px)',
+            boxShadow: '0 8px 25px rgba(252, 209, 68, 0.4)',
+            color: '#000000',
+            '&::before': {
+                left: '100%',
+            }
         }
     },
     watermark: {
