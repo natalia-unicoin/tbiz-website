@@ -36,37 +36,37 @@ const getTheme = () => createTheme({
             fontFamily: 'var(--font-montserrat), Montserrat, sans-serif !important',
             fontWeight: '700 !important',
             lineHeight: 1.1,
-            letterSpacing: '-1px',
+            letterSpacing: '-0.02em !important',
             textAlign: 'center',
         },
         h2: {
             fontFamily: 'var(--font-montserrat), Montserrat, sans-serif !important',
             fontWeight: '700 !important',
-            letterSpacing: '-1px',
+            letterSpacing: '-0.02em !important',
             textAlign: 'center',
         },
         h3: {
             fontFamily: 'var(--font-montserrat), Montserrat, sans-serif !important',
             fontWeight: '700 !important',
-            letterSpacing: '-1px',
+            letterSpacing: '-0.02em !important',
             textAlign: 'center',
         },
         h4: {
             fontFamily: 'var(--font-montserrat), Montserrat, sans-serif !important',
             fontWeight: '700 !important',
-            letterSpacing: '-1px',
+            letterSpacing: '-0.02em !important',
             textAlign: 'center',
         },
         h5: {
             fontFamily: 'var(--font-montserrat), Montserrat, sans-serif !important',
             fontWeight: '700 !important',
-            letterSpacing: '-1px',
+            letterSpacing: '-0.02em !important',
             textAlign: 'center',
         },
         h6: {
             fontFamily: 'var(--font-montserrat), Montserrat, sans-serif !important',
             fontWeight: '700 !important',
-            letterSpacing: '-1px',
+            letterSpacing: '-0.02em !important',
             textAlign: 'center',
         },
         body1: {
@@ -91,7 +91,8 @@ const getTheme = () => createTheme({
                 h1, h2, h3, h4, h5, h6 {
                     font-family: var(--font-montserrat), sans-serif !important;
                     font-weight: 700 !important;
-                    letter-spacing: -1px !important;
+                    letter-spacing: -0.02em !important;
+                    text-align: center !important;
                 }
             `,
         },

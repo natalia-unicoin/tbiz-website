@@ -48,12 +48,13 @@ export const useStyles = makeStyles()((theme) => ({
     },
     title: {
         fontFamily: theme.typography.h1.fontFamily, // Montserrat
-        fontWeight: 700,
-        letterSpacing: '-0.03em',
+        fontWeight: '700 !important' as any,
+        letterSpacing: '-0.02em !important',
         marginBottom: theme.spacing(1),
         color: '#FFFFFF', // White for video
         fontSize: '40px', // Reverted to 40px for mobile safety
         lineHeight: '1',
+        textAlign: 'center !important' as any,
         [theme.breakpoints.up('md')]: {
             fontSize: '64px',
         },

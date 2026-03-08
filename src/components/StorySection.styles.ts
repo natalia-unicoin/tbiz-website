@@ -103,11 +103,12 @@ export const useStyles = makeStyles()((theme) => ({
     },
     title: {
         fontFamily: theme.typography.h1.fontFamily,
-        fontWeight: 700,
-        letterSpacing: '-0.03em',
+        fontWeight: '700 !important' as any,
+        letterSpacing: '-0.02em !important',
         marginBottom: theme.spacing(4),
         lineHeight: 1.1,
         fontSize: '48px',
+        textAlign: 'center !important' as any,
         color: '#111827', // Very dark gray for premium contrast
         [theme.breakpoints.up('md')]: {
             fontSize: '64px',
