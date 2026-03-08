@@ -39,11 +39,12 @@ body {
   padding: 0;
   background-color: var(--bg-color);
   color: var(--text-color);
-  font-family: var(--font-main);
+  font-family: var(--font-main), sans-serif !important;
   font-size: 18px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+  text-align: center; /* Force centering globally as requested */
 }
 
 h1,
@@ -52,14 +53,19 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-display);
-  font-weight: 700;
+  font-family: var(--font-display), sans-serif !important;
+  font-weight: 700 !important;
   margin: 0;
+  text-align: center !important; /* Force centering globally as requested */
 }
 
 /* Typography Utility Classes */
 .font-hand {
   font-family: 'Caveat', cursive !important;
+}
+
+.text-center {
+  text-align: center !important;
 }
 
 a {

@@ -49,11 +49,14 @@ export const useStyles = makeStyles()((theme) => ({
     },
     textContent: {
         flex: 1,
-        maxWidth: '600px',
+        maxWidth: '800px', // increased from 600px to give centered text more room
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
+        alignItems: 'center', // added center alignment explicitly
+        textAlign: 'center', // explicitly Center
         zIndex: 2,
+        margin: '0 auto', // ensure block is centered
     },
     textContentCenter: {
         alignItems: 'center',
