@@ -26,7 +26,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${montserrat.variable} font-sans antialiased selection:bg-[#EBE563] selection:text-black`}>
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+      </head>
+      <body className="font-sans antialiased selection:bg-[#EBE563] selection:text-black">
         <ThemeProviderWrapper>
           <ThemeRegistry>
             <ModalProvider>

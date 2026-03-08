@@ -102,7 +102,7 @@ export const useStyles = makeStyles()((theme) => ({
         display: 'block',
     },
     title: {
-        fontFamily: theme.typography.h1.fontFamily,
+        fontFamily: "'Montserrat', sans-serif !important",
         fontWeight: '700 !important' as any,
         letterSpacing: '-0.02em !important',
         marginBottom: theme.spacing(4),

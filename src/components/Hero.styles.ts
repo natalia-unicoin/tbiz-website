@@ -47,7 +47,7 @@ export const useStyles = makeStyles()((theme) => ({
         }
     },
     title: {
-        fontFamily: theme.typography.h1.fontFamily, // Montserrat
+        fontFamily: "'Montserrat', sans-serif !important",
         fontWeight: '700 !important' as any,
         letterSpacing: '-0.02em !important',
         marginBottom: theme.spacing(1),
