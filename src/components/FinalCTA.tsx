@@ -29,6 +29,17 @@ const FinalCTA = () => {
                     Continue the Journey
                 </motion.h2>
 
+                <motion.p
+                    className={classes.subtitle}
+                    initial={{ y: 20, opacity: 0 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+                    style={{ color: '#4B5563', marginTop: '-8px' }}
+                >
+                    Explore the companies and initiatives that form part of this evolving global ecosystem.
+                </motion.p>
+
                 <div
                     ref={carouselRef}
                     style={{
@@ -54,10 +65,10 @@ const FinalCTA = () => {
                         transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
                     >
                         {[
-                            { title: "TransparentBusiness", desc: "Transparency infrastructure for the digital economy.", link: "https://transparentbusiness.com", img: getImagePath('assets/box-placeholder.jpg') },
-                            { title: "Unicoin", desc: "The next-generation asset-backed cryptocurrency.", link: "https://unicoin.com", img: getImagePath('assets/unicoin-thumbnail.jpg') },
-                            { title: "Unicorn Hunters", desc: "The most iconic investment show in history.", link: "https://unicornhunters.com", img: getImagePath('assets/uh-thumbnail.jpg') },
-                            { title: "SheWorks", desc: "Empowering women globally with remote opportunities.", link: "https://sheworks.com", img: getImagePath('assets/sheworks-thumbnail.jpg') }
+                            { title: "TransparentBusiness", desc: "Technology infrastructure focused on transparency in digital operations.", link: "https://transparentbusiness.com", img: getImagePath('assets/box-placeholder.jpg') },
+                            { title: "Unicoin", desc: "An asset-backed digital asset designed to bring transparency to the crypto economy.", link: "https://unicoin.com", img: getImagePath('assets/unicoin-thumbnail.jpg') },
+                            { title: "Unicorn Hunters", desc: "A global media platform connecting innovative companies with investors.", link: "https://unicornhunters.com", img: getImagePath('assets/uh-thumbnail.jpg') },
+                            { title: "SheWorks!", desc: "A global community empowering women through remote work opportunities.", link: "https://sheworks.com", img: getImagePath('assets/sheworks-thumbnail.jpg') }
                         ].map((card, idx) => (
                             <motion.a
                                 key={idx}
