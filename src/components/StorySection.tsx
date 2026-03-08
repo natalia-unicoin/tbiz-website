@@ -11,7 +11,7 @@ const storyBlocks = [
         eyebrow: "Origins",
         title: "Where the Vision Began",
         description: "The beginning of the vision focused on transparency and accountability in digital work.",
-        image: 'assets/poised-bg.jpg',
+        image: 'assets/box-placeholder.jpg',
         layout: 'hero-image'
     },
     {
@@ -19,7 +19,7 @@ const storyBlocks = [
         highlight: "SheWorks",
         title: "Empowering Women Through Work",
         description: "Highlight the launch and global impact of SheWorks as a platform empowering women through remote work.",
-        image: 'assets/executive-standing.png',
+        image: 'assets/box-placeholder.jpg',
         cta: { text: "Discover SheWorks", link: "https://sheworks.com" },
         layout: 'split-right'
     },
@@ -28,7 +28,7 @@ const storyBlocks = [
         highlight: "Unicorn Hunters",
         title: "Democratizing Access to Investment",
         description: "Highlight the media and investment platform Unicorn Hunters and its mission to democratize access to investment opportunities.",
-        image: 'assets/poised-bg.jpg',
+        image: 'assets/box-placeholder.jpg',
         cta: { text: "Explore Unicorn Hunters", link: "https://unicornhunters.com" },
         layout: 'split-left'
     },
@@ -37,7 +37,7 @@ const storyBlocks = [
         highlight: "Unicoin",
         title: "A New Model for Digital Assets",
         description: "Introduction of Unicoin as an asset-backed digital asset bringing transparency to the crypto ecosystem.",
-        image: 'assets/bg-white.png',
+        image: 'assets/box-placeholder.jpg',
         cta: { text: "Learn about Unicoin", link: "https://unicoin.com" },
         layout: 'hero-image'
     },
@@ -46,7 +46,7 @@ const storyBlocks = [
         eyebrow: "Vision",
         title: "The Vision for the Future",
         description: "A section explaining the broader vision behind the ecosystem and its role in shaping the future of digital work, finance, and technology.",
-        image: 'assets/poised-bg.jpg',
+        image: 'assets/box-placeholder.jpg',
         layout: 'split-right'
     },
     {
@@ -54,7 +54,7 @@ const storyBlocks = [
         eyebrow: "Global Ecosystem",
         title: "A Global Network",
         description: "Showcase the international presence of the ecosystem, including partners, collaborators, global reach, and media presence.",
-        image: 'assets/executive-standing.png',
+        image: 'assets/box-placeholder.jpg',
         layout: 'split-left'
     }
 ];

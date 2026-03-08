@@ -17,7 +17,7 @@ export const useStyles = makeStyles()((theme) => ({
         inset: 0,
         zIndex: 0,
         backgroundColor: '#0F1626',
-        backgroundImage: 'url("/assets/poised-bg.jpg")', // Using an existing asset as placeholder for abstract visual
+        backgroundImage: 'url("/assets/box-placeholder.jpg")', // Matching the user's abstract blue visual
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed', // Parallax effect
@@ -52,15 +52,9 @@ export const useStyles = makeStyles()((theme) => ({
         letterSpacing: '-0.02em !important',
         marginBottom: theme.spacing(1),
         color: '#FFFFFF', // White for video
-        fontSize: '40px', // Reverted to 40px for mobile safety
+        fontSize: 'clamp(3rem, 8vw, 7rem) !important', // ~48px to 112px
         lineHeight: '1',
         textAlign: 'center !important' as any,
-        [theme.breakpoints.up('md')]: {
-            fontSize: '64px',
-        },
-        [theme.breakpoints.up('lg')]: {
-            fontSize: '84px',
-        },
         textWrap: 'balance',
     },
     subtitle: {

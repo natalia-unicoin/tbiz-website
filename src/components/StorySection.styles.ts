@@ -107,26 +107,17 @@ export const useStyles = makeStyles()((theme) => ({
         letterSpacing: '-0.02em !important',
         marginBottom: theme.spacing(4),
         lineHeight: 1.1,
-        fontSize: '48px',
+        fontSize: 'clamp(2.625rem, 5.25vw, 4.5rem) !important',
         textAlign: 'center !important' as any,
         color: '#111827', // Very dark gray for premium contrast
-        [theme.breakpoints.up('md')]: {
-            fontSize: '64px',
-        },
-        [theme.breakpoints.up('lg')]: {
-            fontSize: '80px',
-        },
         textWrap: 'balance',
     },
     description: {
-        fontSize: '1.25rem',
+        fontSize: 'clamp(1.125rem, 1.5vw, 1.5rem)',
         color: '#4B5563', // Slightly lighter gray for body
         lineHeight: 1.6,
         textWrap: 'balance',
         fontWeight: 400,
-        [theme.breakpoints.up('md')]: {
-            fontSize: '1.5rem', // Large typography for minimal text
-        }
     },
     ctaContainer: {
         marginTop: theme.spacing(6),
