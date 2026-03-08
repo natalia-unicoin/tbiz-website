@@ -10,16 +10,16 @@ const storyBlocks = [
         id: "origins",
         eyebrow: "Origins",
         title: "Where the Vision Began",
-        description: "The journey began with a simple idea: bringing transparency and accountability to digital work.",
-        image: 'assets/poised-bg.jpg', // Placeholder for archival images
+        description: "The beginning of the vision focused on transparency and accountability in digital work.",
+        image: 'assets/poised-bg.jpg',
         layout: 'hero-image'
     },
     {
         id: "sheworks",
         highlight: "SheWorks",
         title: "Empowering Women Through Work",
-        description: "A global platform connecting women with remote professional opportunities.",
-        image: 'assets/executive-standing.png', // Placeholder
+        description: "Highlight the launch and global impact of SheWorks as a platform empowering women through remote work.",
+        image: 'assets/executive-standing.png',
         cta: { text: "Discover SheWorks", link: "https://sheworks.com" },
         layout: 'split-right'
     },
@@ -27,8 +27,8 @@ const storyBlocks = [
         id: "unicorn-hunters",
         highlight: "Unicorn Hunters",
         title: "Democratizing Access to Investment",
-        description: "A global media platform connecting innovative companies with investors worldwide.",
-        image: 'assets/poised-bg.jpg', // Placeholder
+        description: "Highlight the media and investment platform Unicorn Hunters and its mission to democratize access to investment opportunities.",
+        image: 'assets/poised-bg.jpg',
         cta: { text: "Explore Unicorn Hunters", link: "https://unicornhunters.com" },
         layout: 'split-left'
     },
@@ -36,8 +36,8 @@ const storyBlocks = [
         id: "unicoin",
         highlight: "Unicoin",
         title: "A New Model for Digital Assets",
-        description: "An asset-backed digital asset designed to bring transparency to the crypto economy.",
-        image: 'assets/bg-white.png', // Placeholder
+        description: "Introduction of Unicoin as an asset-backed digital asset bringing transparency to the crypto ecosystem.",
+        image: 'assets/bg-white.png',
         cta: { text: "Learn about Unicoin", link: "https://unicoin.com" },
         layout: 'hero-image'
     },
@@ -45,16 +45,16 @@ const storyBlocks = [
         id: "vision",
         eyebrow: "Vision",
         title: "The Vision for the Future",
-        description: "Building infrastructure for transparency across digital work, finance, and global organizations.",
-        image: 'assets/poised-bg.jpg', // Placeholder
+        description: "A section explaining the broader vision behind the ecosystem and its role in shaping the future of digital work, finance, and technology.",
+        image: 'assets/poised-bg.jpg',
         layout: 'split-right'
     },
     {
         id: "global-ecosystem",
         eyebrow: "Global Ecosystem",
         title: "A Global Network",
-        description: "Companies, partners and collaborators around the world contributing to a growing ecosystem.",
-        image: 'assets/executive-standing.png', // Placeholder
+        description: "Showcase the international presence of the ecosystem, including partners, collaborators, global reach, and media presence.",
+        image: 'assets/executive-standing.png',
         layout: 'split-left'
     }
 ];
@@ -67,7 +67,7 @@ const WarOnCryptoSection = () => {
                 <span className={classes.eyebrow}>War on Crypto</span>
                 <h2 className={classes.titleSmall}>Standing for Transparency</h2>
                 <p className={classes.descriptionSmall}>
-                    A defining legal moment defending innovation and transparency in the crypto industry.
+                    Brief reference to the regulatory/legal battle known as "War on Crypto," with a link to the dedicated site.
                 </p>
                 <a href="https://waroncrypto.com" className={classes.ctaButtonOutline}>
                     Read the full story

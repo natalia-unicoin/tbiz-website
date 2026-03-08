@@ -34,8 +34,8 @@ const Hero = () => {
                     transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
                 >
                     <p className={classes.subtitle}>
-                        From transparency in digital work to a global ecosystem<br />
-                        shaping the future of finance and technology.
+                        Introduction to the concept of the page:<br />
+                        the evolution of the vision and ecosystem.
                     </p>
                 </motion.div>
 
