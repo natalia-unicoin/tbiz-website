@@ -7,23 +7,7 @@ export const useStyles = makeStyles()((theme) => ({
         textAlign: 'center',
         position: 'relative',
         overflow: 'hidden',
-        borderTop: '1px solid rgba(255,255,255,0.1)', // Subtler border
-        backgroundColor: theme.palette.primary.main, // Fallback if image fails
-    },
-    bgImage: {
-        position: 'absolute',
-        inset: 0,
-        zIndex: 0,
-        width: '100%',
-        height: '100%',
-        objectFit: 'cover',
-        objectPosition: 'center',
-    },
-    overlay: {
-        position: 'absolute',
-        inset: 0,
-        zIndex: 1,
-        backgroundColor: 'rgba(14, 26, 43, 0.5)', // Reduced overlay opacity to make image more visible
+        backgroundColor: '#F5F5F7', // Clean Apple-style light gray
     },
     container: {
         maxWidth: '100%',
@@ -42,7 +26,7 @@ export const useStyles = makeStyles()((theme) => ({
         fontWeight: 700,
         marginBottom: theme.spacing(3),
         letterSpacing: '-0.03em',
-        fontFamily: theme.typography.h1.fontFamily,
+        fontFamily: "'Montserrat', sans-serif !important",
         fontSize: '44px',
         [theme.breakpoints.up('md')]: {
             fontSize: '64px',
@@ -50,7 +34,7 @@ export const useStyles = makeStyles()((theme) => ({
         [theme.breakpoints.up('lg')]: {
             fontSize: '72px',
         },
-        color: '#FFFFFF',
+        color: '#111827',
         textWrap: 'balance',
     },
     subtitle: {
