@@ -38,37 +38,75 @@ const FinalCTA = () => {
                     transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
                 >
                     {[
-                        { title: "TransparentBusiness", desc: "Transparency infrastructure for the digital economy", link: "https://transparentbusiness.com" },
-                        { title: "Unicoin", desc: "Asset-backed digital asset", link: "https://unicoin.com" },
-                        { title: "Unicorn Hunters", desc: "Investment show connecting startups with investors", link: "https://unicornhunters.com" },
-                        { title: "SheWorks", desc: "Global remote opportunities for women", link: "https://sheworks.com" }
+                        { title: "TransparentBusiness", desc: "Transparency infrastructure for the digital economy", link: "https://transparentbusiness.com", img: getImagePath('assets/box-placeholder.jpg') },
+                        { title: "Unicoin", desc: "Asset-backed digital asset", link: "https://unicoin.com", img: getImagePath('assets/box-placeholder.jpg') },
+                        { title: "Unicorn Hunters", desc: "Investment show connecting startups with investors", link: "https://unicornhunters.com", img: getImagePath('assets/box-placeholder.jpg') },
+                        { title: "SheWorks", desc: "Global remote opportunities for women", link: "https://sheworks.com", img: getImagePath('assets/box-placeholder.jpg') }
                     ].map((card, idx) => (
                         <a key={idx} href={card.link} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
                             <div style={{
-                                background: 'rgba(255,255,255,0.05)',
-                                backdropFilter: 'blur(10px)',
-                                border: '1px solid rgba(255,255,255,0.1)',
-                                borderRadius: '24px',
-                                padding: '40px 32px',
+                                position: 'relative',
+                                borderRadius: '16px',
+                                overflow: 'hidden',
                                 display: 'flex',
                                 flexDirection: 'column',
-                                gap: '16px',
-                                height: '100%',
+                                justifyContent: 'flex-end',
+                                padding: '40px 24px',
+                                minHeight: '480px',
                                 transition: 'all 0.4s cubic-bezier(0.16, 1, 0.3, 1)',
-                                cursor: 'pointer'
+                                cursor: 'pointer',
+                                boxShadow: '0 10px 30px rgba(0,0,0,0.5)',
                             }}
                                 onMouseEnter={(e) => {
-                                    e.currentTarget.style.background = 'rgba(255,255,255,0.1)';
-                                    e.currentTarget.style.transform = 'translateY(-8px)';
-                                    e.currentTarget.style.boxShadow = '0 20px 40px rgba(0,0,0,0.2)';
+                                    e.currentTarget.style.transform = 'translateY(-12px)';
+                                    e.currentTarget.style.boxShadow = '0 25px 50px rgba(0,0,0,0.7)';
+                                    const img = e.currentTarget.querySelector('.bg-img') as HTMLElement;
+                                    if (img) img.style.transform = 'scale(1.05)';
                                 }}
                                 onMouseLeave={(e) => {
-                                    e.currentTarget.style.background = 'rgba(255,255,255,0.05)';
                                     e.currentTarget.style.transform = 'translateY(0)';
-                                    e.currentTarget.style.boxShadow = 'none';
+                                    e.currentTarget.style.boxShadow = '0 10px 30px rgba(0,0,0,0.5)';
+                                    const img = e.currentTarget.querySelector('.bg-img') as HTMLElement;
+                                    if (img) img.style.transform = 'scale(1)';
                                 }}>
-                                <h3 style={{ fontSize: '1.75rem', fontWeight: 700, color: '#FFFFFF', margin: 0, fontFamily: 'Montserrat, sans-serif' }}>{card.title}</h3>
-                                <p style={{ color: '#9CA3AF', fontSize: '1.125rem', margin: 0, lineHeight: 1.6 }}>{card.desc}</p>
+
+                                {/* Background Image */}
+                                <div className="bg-img" style={{
+                                    position: 'absolute',
+                                    inset: 0,
+                                    backgroundImage: `url(${card.img})`,
+                                    backgroundSize: 'cover',
+                                    backgroundPosition: 'center',
+                                    zIndex: 0,
+                                    transition: 'transform 0.7s ease',
+                                }} />
+
+                                {/* Gradient Overlay */}
+                                <div style={{
+                                    position: 'absolute',
+                                    inset: 0,
+                                    background: 'linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.3) 60%, rgba(0,0,0,0) 100%)',
+                                    zIndex: 1,
+                                    pointerEvents: 'none'
+                                }} />
+
+                                {/* Content */}
+                                <div style={{ position: 'relative', zIndex: 2, textAlign: 'center' }}>
+                                    <h3 style={{
+                                        fontSize: '1.75rem',
+                                        fontWeight: 700,
+                                        color: '#FFFFFF',
+                                        margin: 0,
+                                        letterSpacing: '-0.02em',
+                                    }}>{card.title}</h3>
+                                    <p style={{
+                                        color: '#E5E7EB',
+                                        fontSize: '1rem',
+                                        marginTop: '12px',
+                                        marginBottom: 0,
+                                        lineHeight: 1.5
+                                    }}>{card.desc}</p>
+                                </div>
                             </div>
                         </a>
                     ))}

@@ -19,6 +19,24 @@ const Hero = () => {
 
             {/* Content */}
             <div className={classes.content}>
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+                >
+                    <span style={{
+                        display: 'inline-block',
+                        color: '#FCD144',
+                        fontWeight: 700,
+                        letterSpacing: '0.15em',
+                        fontSize: '0.875rem',
+                        marginBottom: '1.5rem',
+                        textTransform: 'uppercase'
+                    }}>
+                        BETA VERSION 1
+                    </span>
+                </motion.div>
+
                 <motion.h1
                     className={classes.title}
                     initial={{ y: 30 }}
