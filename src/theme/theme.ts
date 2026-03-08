@@ -31,56 +31,56 @@ const getPalette = () => {
 const getTheme = () => createTheme({
     palette: getPalette(),
     typography: {
-        fontFamily: 'var(--font-inter), sans-serif',
+        fontFamily: inter.style.fontFamily,
         h1: {
-            fontFamily: 'var(--font-montserrat), Montserrat, sans-serif !important',
+            fontFamily: `${montserrat.style.fontFamily} !important`,
             fontWeight: '700 !important',
             lineHeight: 1.1,
             letterSpacing: '-0.02em !important',
             textAlign: 'center',
         },
         h2: {
-            fontFamily: 'var(--font-montserrat), Montserrat, sans-serif !important',
+            fontFamily: `${montserrat.style.fontFamily} !important`,
             fontWeight: '700 !important',
             letterSpacing: '-0.02em !important',
             textAlign: 'center',
         },
         h3: {
-            fontFamily: 'var(--font-montserrat), Montserrat, sans-serif !important',
+            fontFamily: `${montserrat.style.fontFamily} !important`,
             fontWeight: '700 !important',
             letterSpacing: '-0.02em !important',
             textAlign: 'center',
         },
         h4: {
-            fontFamily: 'var(--font-montserrat), Montserrat, sans-serif !important',
+            fontFamily: `${montserrat.style.fontFamily} !important`,
             fontWeight: '700 !important',
             letterSpacing: '-0.02em !important',
             textAlign: 'center',
         },
         h5: {
-            fontFamily: 'var(--font-montserrat), Montserrat, sans-serif !important',
+            fontFamily: `${montserrat.style.fontFamily} !important`,
             fontWeight: '700 !important',
             letterSpacing: '-0.02em !important',
             textAlign: 'center',
         },
         h6: {
-            fontFamily: 'var(--font-montserrat), Montserrat, sans-serif !important',
+            fontFamily: `${montserrat.style.fontFamily} !important`,
             fontWeight: '700 !important',
             letterSpacing: '-0.02em !important',
             textAlign: 'center',
         },
         body1: {
-            fontFamily: 'var(--font-inter), sans-serif',
+            fontFamily: inter.style.fontFamily,
             fontSize: '18px',
             lineHeight: 1.6,
         },
         body2: {
-            fontFamily: 'var(--font-inter), sans-serif',
+            fontFamily: inter.style.fontFamily,
             fontSize: '18px',
             lineHeight: 1.6,
         },
         subtitle1: {
-            fontFamily: 'var(--font-inter), sans-serif',
+            fontFamily: inter.style.fontFamily,
             fontSize: '18px',
             lineHeight: 1.6,
         }
@@ -89,7 +89,7 @@ const getTheme = () => createTheme({
         MuiCssBaseline: {
             styleOverrides: `
                 h1, h2, h3, h4, h5, h6 {
-                    font-family: var(--font-montserrat), sans-serif !important;
+                    font-family: ${montserrat.style.fontFamily} !important;
                     font-weight: 700 !important;
                     letter-spacing: -0.02em !important;
                     text-align: center !important;
