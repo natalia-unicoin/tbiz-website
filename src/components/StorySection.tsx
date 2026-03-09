@@ -8,14 +8,14 @@ import { getImagePath } from '@/utils/image';
 const storyBlocks = [
     {
         id: "origins",
-        eyebrow: "Origins",
+        eyebrow: "Origins + Founders",
         title: "Where the Vision Began",
         description: [
             "The journey began with a simple but powerful idea: bring transparency and accountability to digital work.",
             "As organizations increasingly relied on distributed teams and global talent, new tools were needed to manage work, productivity, and collaboration with clarity and trust.",
             "This vision laid the foundation for a broader ecosystem built around transparency, technology, and global opportunity."
         ],
-        bgImage: getImagePath('assets/origins-bg.jpg'),
+        bgImage: getImagePath('assets/founders-bg.jpg'),
     },
     {
         id: "sheworks",
