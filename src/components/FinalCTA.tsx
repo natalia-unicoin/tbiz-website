@@ -40,70 +40,74 @@ const FinalCTA = () => {
                     Explore the companies and initiatives that form part of this evolving global ecosystem.
                 </motion.p>
 
-                <motion.div
-                    style={{
-                        width: '100%',
-                        marginTop: '64px',
-                        overflowX: 'auto',
-                        paddingBottom: '40px', // Allow shadow overflow below
-                        paddingLeft: '20px', // Side padding for the scroll
-                        paddingRight: '20px',
-                        display: 'flex',
-                        gap: '24px',
-                        WebkitOverflowScrolling: 'touch',
-                        scrollbarWidth: 'none', // Firefox hide scrollbar
-                    }}
-                    initial={{ y: 30, opacity: 0 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-                >
-                    {[
-                        { title: "TransparentBusiness", link: "https://transparentbusiness.com", img: getImagePath('assets/tbiz-poster.jpg') },
-                        { title: "Unicoin", link: "https://unicoin.com", img: getImagePath('assets/unicoin-poster.jpg') },
-                        { title: "Unicorn Hunters", link: "https://unicornhunters.com", img: getImagePath('assets/unicorn-hunters-poster.jpg') },
-                        { title: "SheWorks!", link: "https://sheworks.com", img: getImagePath('assets/sheworks-poster.jpg') }
-                    ].map((card, idx) => (
-                        <motion.a
-                            key={idx}
-                            href={card.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            style={{
-                                textDecoration: 'none',
-                                display: 'block',
-                                minWidth: 'clamp(280px, 70vw, 420px)', // Responsive Apple TV Style
-                                maxWidth: 'clamp(280px, 70vw, 420px)',
-                                flex: '0 0 auto',
-                                borderRadius: '24px',
-                                overflow: 'hidden',
-                                aspectRatio: '16/9',
-                                position: 'relative'
-                            }}
-                            whileHover={{ scale: 1.03, y: -8 }}
-                            transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-                        >
-                            <div style={{
-                                width: '100%',
-                                height: '100%',
-                                position: 'relative',
-                                backgroundColor: '#1E293B', // Subtle fallback
-                                boxShadow: '0 20px 40px rgba(0,0,0,0.4)',
-                            }}>
-                                <div className="bg-img" style={{
-                                    position: 'absolute',
-                                    inset: 0,
-                                    backgroundImage: `url(${card.img})`,
-                                    backgroundSize: 'cover',
-                                    backgroundPosition: 'center',
-                                    transition: 'transform 0.7s ease',
-                                }} />
-                            </div>
-                        </motion.a>
-                    ))}
-                </motion.div>
             </div>
-        </section >
+
+            {/* Full Bleed Carousel Container - Outside the bounded container */}
+            <motion.div
+                style={{
+                    width: '100%',
+                    marginTop: '64px',
+                    overflowX: 'auto',
+                    paddingBottom: '60px', // Allow shadow overflow below
+                    paddingLeft: 'max(20px, calc((100vw - 1200px) / 2))', // Align start with bounded container text
+                    paddingRight: '20px',
+                    display: 'flex',
+                    gap: '32px',
+                    WebkitOverflowScrolling: 'touch',
+                    scrollbarWidth: 'none', // Firefox hide scrollbar
+                    scrollSnapType: 'x mandatory', // Snap to cards
+                }}
+                initial={{ y: 30, opacity: 0 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+            >
+                {[
+                    { title: "TransparentBusiness", link: "https://transparentbusiness.com", img: getImagePath('assets/tbiz-poster.jpg') },
+                    { title: "Unicoin", link: "https://unicoin.com", img: getImagePath('assets/unicoin-poster.jpg') },
+                    { title: "Unicorn Hunters", link: "https://unicornhunters.com", img: getImagePath('assets/unicorn-hunters-poster.jpg') },
+                    { title: "SheWorks!", link: "https://sheworks.com", img: getImagePath('assets/sheworks-poster.jpg') }
+                ].map((card, idx) => (
+                    <motion.a
+                        key={idx}
+                        href={card.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{
+                            textDecoration: 'none',
+                            display: 'block',
+                            minWidth: '85vw', // Massive immersive cards like Apple TV
+                            maxWidth: '1100px', // Cap for ultra-wides
+                            flex: '0 0 auto',
+                            borderRadius: '32px', // Larger radius for big cards
+                            overflow: 'hidden',
+                            aspectRatio: '16/9',
+                            position: 'relative',
+                            scrollSnapAlign: 'center', // Snap to center
+                        }}
+                        whileHover={{ scale: 1.02, y: -8 }}
+                        transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+                    >
+                        <div style={{
+                            width: '100%',
+                            height: '100%',
+                            position: 'relative',
+                            backgroundColor: '#1E293B',
+                            boxShadow: '0 25px 50px -12px rgba(0,0,0,0.5)',
+                        }}>
+                            <div className="bg-img" style={{
+                                position: 'absolute',
+                                inset: 0,
+                                backgroundImage: `url(${card.img})`,
+                                backgroundSize: 'cover',
+                                backgroundPosition: 'center',
+                                transition: 'transform 0.7s ease',
+                            }} />
+                        </div>
+                    </motion.a>
+                ))}
+            </motion.div>
+        </section>
     );
 };
 
