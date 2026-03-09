@@ -126,12 +126,38 @@ export const useStyles = makeStyles()((theme) => ({
         borderTop: '1px solid #E5E7EB',
     },
     warContainer: {
-        maxWidth: '800px',
+        maxWidth: '1200px',
+        width: '100%',
         textAlign: 'center',
-        padding: theme.spacing(8),
-        borderRadius: '24px',
+        padding: theme.spacing(6), // Reduced outer padding to give cards room
+        [theme.breakpoints.up('md')]: {
+            padding: theme.spacing(10), // Desktop padding
+        }
+    },
+    warGrid: {
+        display: 'grid',
+        gridTemplateColumns: '1fr', // Mobile: 1 column
+        gap: theme.spacing(3),
+        marginTop: theme.spacing(6),
+        marginBottom: theme.spacing(6),
+        [theme.breakpoints.up('md')]: {
+            gridTemplateColumns: 'repeat(3, 1fr)', // Desktop: 3 columns
+            gap: theme.spacing(4),
+        }
+    },
+    warCard: {
         backgroundColor: '#F9FAFB', // Very subtle gray
         border: '1px solid #F3F4F6',
+        borderRadius: '24px',
+        padding: theme.spacing(5),
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        transition: 'transform 0.3s ease',
+        '&:hover': {
+            transform: 'translateY(-4px)',
+            boxShadow: '0 10px 30px rgba(0,0,0,0.03)',
+        }
     },
     titleSmall: {
         fontFamily: theme.typography.h2.fontFamily,

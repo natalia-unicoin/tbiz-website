@@ -45,11 +45,13 @@ const FinalCTA = () => {
             {/* Full Bleed Carousel Container - Outside the bounded container */}
             <motion.div
                 style={{
-                    width: '100%',
+                    width: '100vw',
+                    marginLeft: 'calc(50% - 50vw)',
+                    marginRight: 'calc(50% - 50vw)',
                     marginTop: '64px',
                     overflowX: 'auto',
                     paddingBottom: '60px', // Allow shadow overflow below
-                    paddingLeft: 'clamp(20px, 5vw, 100px)', // True full-wide with max 100px margin
+                    paddingLeft: 'clamp(20px, 5vw, 100px)', // Gap from the physical edge of the screen
                     paddingRight: 'clamp(20px, 5vw, 100px)',
                     display: 'flex',
                     gap: '24px', // Tighter gap for smaller cards
