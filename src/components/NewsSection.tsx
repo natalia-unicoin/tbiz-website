@@ -72,14 +72,15 @@ const NewsSection = () => {
                             key={cat}
                             onClick={() => setActiveFilter(cat)}
                             style={{
-                                padding: '8px 20px',
+                                padding: '10px 24px',
                                 borderRadius: '30px',
-                                border: '1px solid',
-                                borderColor: activeFilter === cat ? '#111827' : '#D1D5DB',
-                                backgroundColor: activeFilter === cat ? '#111827' : 'transparent',
-                                color: activeFilter === cat ? '#FFFFFF' : '#4B5563',
-                                fontSize: '14px',
-                                fontWeight: 500,
+                                border: 'none',
+                                backgroundColor: activeFilter === cat ? '#111827' : '#F3F4F6',
+                                color: activeFilter === cat ? '#FFFFFF' : '#111827',
+                                fontSize: '11px',
+                                fontWeight: 600,
+                                textTransform: 'uppercase',
+                                letterSpacing: '0.05em',
                                 cursor: 'pointer',
                                 transition: 'all 0.2s ease',
                             }}
