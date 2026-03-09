@@ -37,5 +37,6 @@ jobs:
         with:
           branch: gh-pages
           folder: out
+          dotfiles: true
           clean-exclude: |
             .nojekyll
