@@ -78,16 +78,22 @@ const WarOnCryptoSection = () => {
             <div className={classes.warContainer}>
                 <span className={classes.eyebrow}>War on Crypto</span>
                 <h2 className={classes.titleSmall}>Standing for Transparency</h2>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-                    <p className={classes.descriptionSmall}>
-                        As innovation in digital finance continues to grow, the ecosystem has also faced regulatory challenges that reflect broader debates within the cryptocurrency industry.
-                    </p>
-                    <p className={classes.descriptionSmall}>
-                        These events became known as the War on Crypto, highlighting the tensions between innovation and regulation in emerging financial technologies.
-                    </p>
-                    <p className={classes.descriptionSmall}>
-                        The story represents an important chapter in the ongoing conversation about transparency, fairness, and the future of digital assets.
-                    </p>
+                <div className={classes.warGrid}>
+                    <div className={classes.warCard}>
+                        <p className={classes.descriptionSmall}>
+                            As innovation in digital finance continues to grow, the ecosystem has also faced regulatory challenges that reflect broader debates within the cryptocurrency industry.
+                        </p>
+                    </div>
+                    <div className={classes.warCard}>
+                        <p className={classes.descriptionSmall}>
+                            These events became known as the War on Crypto, highlighting the tensions between innovation and regulation in emerging financial technologies.
+                        </p>
+                    </div>
+                    <div className={classes.warCard}>
+                        <p className={classes.descriptionSmall}>
+                            The story represents an important chapter in the ongoing conversation about transparency, fairness, and the future of digital assets.
+                        </p>
+                    </div>
                 </div>
                 <a href="https://waroncrypto.com" className={classes.ctaButtonOutline}>
                     Read the Full Story
