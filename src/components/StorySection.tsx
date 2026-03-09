@@ -20,6 +20,7 @@ const storyBlocks = [
     {
         id: "sheworks",
         highlight: "SheWorks!",
+        logoImage: getImagePath('assets/logo-sheworks-white.png'),
         title: "Empowering Women Through Work",
         description: [
             "The vision expanded globally with the creation of SheWorks!, a platform designed to connect women with remote professional opportunities.",
@@ -31,6 +32,7 @@ const storyBlocks = [
     {
         id: "unicorn-hunters",
         highlight: "Unicorn Hunters",
+        logoImage: getImagePath('assets/logo-unicorn-hunters-white.png'),
         title: "Democratizing Access to Investment",
         description: [
             "The ecosystem expanded into media and global investment with the launch of Unicorn Hunters.",
@@ -43,13 +45,14 @@ const storyBlocks = [
     {
         id: "unicoin",
         highlight: "Unicoin",
+        logoImage: getImagePath('assets/logo-unicoin-white.png'),
         title: "A New Model for Digital Assets",
         description: [
-            "The next step in the ecosystem’s evolution introduced a new approach to digital assets.",
-            "Unicoin was created as an asset-backed cryptocurrency designed to bring greater transparency and accountability to the crypto economy.",
-            "Built on the principles of transparency and long-term value, the project aims to create a more stable and trustworthy model for digital finance."
+            "Building upon the mission of democratizing investment, Unicoin was developed as an asset-backed cryptocurrency.",
+            "Unlike traditional digital currencies, Unicoin is designed to reduce volatility by being backed by real-world assets and equity stakes in high-growth companies.",
+            "This approach bridges the gap between traditional finance and blockchain technology, offering a more stable path for digital asset holders."
         ],
-        cta: { text: "Learn about Unicoin", link: "https://unicoin.com" },
+        cta: { text: "Learn About Unicoin", link: "https://unicoin.com" },
     },
     {
         id: "vision",
@@ -145,9 +148,13 @@ const StorySection = () => {
                                 transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
                             >
                                 <span className={classes.eyebrow} style={{ color: block.bgImage ? '#E5E7EB' : undefined }}>
-                                    {block.highlight ? (
-                                        <span style={{ color: block.bgImage ? '#38BDF8' : '#009EE3' }}>{block.highlight}</span>
-                                    ) : block.eyebrow}
+                                    {block.logoImage ? (
+                                        <img src={block.logoImage} alt={`${block.eyebrow || block.highlight} logo`} style={{ height: '32px', width: 'auto', marginBottom: '8px', filter: block.bgImage ? 'none' : 'invert(1)' }} />
+                                    ) : (
+                                        block.highlight ? (
+                                            <span style={{ color: block.bgImage ? '#38BDF8' : '#009EE3' }}>{block.highlight}</span>
+                                        ) : block.eyebrow
+                                    )}
                                 </span>
 
                                 <h2 className={classes.title} style={{ color: textColor }}>{block.title}</h2>
