@@ -52,7 +52,7 @@ const FinalCTA = () => {
                     paddingLeft: 'max(20px, calc((100vw - 1200px) / 2))', // Align start with bounded container text
                     paddingRight: '20px',
                     display: 'flex',
-                    gap: '32px',
+                    gap: '24px', // Tighter gap for smaller cards
                     WebkitOverflowScrolling: 'touch',
                     scrollbarWidth: 'none', // Firefox hide scrollbar
                     scrollSnapType: 'x mandatory', // Snap to cards
@@ -76,14 +76,14 @@ const FinalCTA = () => {
                         style={{
                             textDecoration: 'none',
                             display: 'block',
-                            minWidth: '85vw', // Massive immersive cards like Apple TV
-                            maxWidth: '1100px', // Cap for ultra-wides
+                            minWidth: 'clamp(260px, 24vw, 420px)', // Precisely sizes the cards so 4 fit (with the last just cut off on 1080p, hinting at scroll)
+                            maxWidth: 'clamp(260px, 24vw, 420px)',
                             flex: '0 0 auto',
-                            borderRadius: '32px', // Larger radius for big cards
+                            borderRadius: '16px', // Standard modern radius
                             overflow: 'hidden',
                             aspectRatio: '16/9',
                             position: 'relative',
-                            scrollSnapAlign: 'center', // Snap to center
+                            scrollSnapAlign: 'start', // Snap nicely to the left
                         }}
                         whileHover={{ scale: 1.02, y: -8 }}
                         transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
