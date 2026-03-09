@@ -15,6 +15,7 @@ const storyBlocks = [
             "As organizations increasingly relied on distributed teams and global talent, new tools were needed to manage work, productivity, and collaboration with clarity and trust.",
             "This vision laid the foundation for a broader ecosystem built around transparency, technology, and global opportunity."
         ],
+        bgImage: getImagePath('assets/origins-bg.jpg'),
     },
     {
         id: "sheworks",
@@ -110,11 +111,29 @@ const StorySection = () => {
         <div id="story" className={classes.wrapper}>
             {storyBlocks.map((block, index) => {
                 const bgColors = ['#FFFFFF', '#F9F9F9', '#F7F9FC'];
-                const currentBg = bgColors[index % 3];
+                const currentBg = block.bgImage ? 'transparent' : bgColors[index % 3];
+                const textColor = block.bgImage ? '#FFFFFF' : 'inherit';
+                const descColor = block.bgImage ? 'rgba(255, 255, 255, 0.9)' : undefined;
 
                 return (
-                    <section key={block.id} className={classes.section} style={{ backgroundColor: currentBg }}>
-                        <div className={classes.container}>
+                    <section key={block.id} className={classes.section} style={{ backgroundColor: currentBg, position: 'relative', overflow: 'hidden' }}>
+                        {/* Background Image Layer */}
+                        {block.bgImage && (
+                            <div style={{
+                                position: 'absolute',
+                                top: 0,
+                                left: 0,
+                                width: '100vw',
+                                height: '100%',
+                                marginLeft: 'calc(50% - 50vw)', // Break out of container
+                                backgroundImage: `linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.3) 100%), url(${block.bgImage})`,
+                                backgroundSize: 'cover',
+                                backgroundPosition: 'center',
+                                zIndex: 0
+                            }} />
+                        )}
+
+                        <div className={classes.container} style={{ position: 'relative', zIndex: 1 }}>
 
                             {/* Text Content */}
                             <motion.div
@@ -124,20 +143,20 @@ const StorySection = () => {
                                 viewport={{ once: true, margin: "-100px" }}
                                 transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
                             >
-                                <span className={classes.eyebrow}>
+                                <span className={classes.eyebrow} style={{ color: block.bgImage ? '#E5E7EB' : undefined }}>
                                     {block.highlight ? (
-                                        <span style={{ color: '#009EE3' }}>{block.highlight}</span>
+                                        <span style={{ color: block.bgImage ? '#38BDF8' : '#009EE3' }}>{block.highlight}</span>
                                     ) : block.eyebrow}
                                 </span>
 
-                                <h2 className={classes.title}>{block.title}</h2>
+                                <h2 className={classes.title} style={{ color: textColor }}>{block.title}</h2>
                                 <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
                                     {Array.isArray(block.description) ? (
                                         block.description.map((p, idx) => (
-                                            <p key={idx} className={classes.description}>{p}</p>
+                                            <p key={idx} className={classes.description} style={{ color: descColor }}>{p}</p>
                                         ))
                                     ) : (
-                                        <p className={classes.description}>{block.description}</p>
+                                        <p className={classes.description} style={{ color: descColor }}>{block.description}</p>
                                     )}
                                 </div>
                             </motion.div>
