@@ -59,7 +59,7 @@ const FinalCTA = () => {
                     transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
                 >
                     {[
-                        { title: "TransparentBusiness", link: "https://transparentbusiness.com", img: getImagePath('assets/box-placeholder.jpg') },
+                        { title: "TransparentBusiness", link: "https://transparentbusiness.com", img: getImagePath('assets/tbiz-poster.jpg') },
                         { title: "Unicoin", link: "https://unicoin.com", img: getImagePath('assets/unicoin-poster.jpg') },
                         { title: "Unicorn Hunters", link: "https://unicornhunters.com", img: getImagePath('assets/unicorn-hunters-poster.jpg') },
                         { title: "SheWorks!", link: "https://sheworks.com", img: getImagePath('assets/sheworks-poster.jpg') }
@@ -72,8 +72,8 @@ const FinalCTA = () => {
                             style={{
                                 textDecoration: 'none',
                                 display: 'block',
-                                minWidth: '640px', // Large Apple TV Style
-                                maxWidth: '640px',
+                                minWidth: 'clamp(280px, 70vw, 420px)', // Responsive Apple TV Style
+                                maxWidth: 'clamp(280px, 70vw, 420px)',
                                 flex: '0 0 auto',
                                 borderRadius: '24px',
                                 overflow: 'hidden',
