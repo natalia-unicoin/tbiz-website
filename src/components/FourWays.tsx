@@ -114,9 +114,6 @@ const FourWays = () => {
                                         className={`${classes.arrowButton} group-hover:rotate-0 group-hover:bg-white`}
                                         style={{ color: card.color }}
                                     >
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-white group-hover:text-black transition-colors">
-                                            <path d="M5 12h14M12 5l7 7-7 7" />
-                                        </svg>
                                     </div>
                                 </div>
                             </motion.div>

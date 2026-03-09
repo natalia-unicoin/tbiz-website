@@ -5,17 +5,17 @@ import { motion } from 'framer-motion';
 import useStyles from './FourWaysSection.styles';
 
 type FourWaysCard = {
-  title:string;
-  description:string;
-  image:string;
-  color:string;
+  title: string;
+  description: string;
+  image: string;
+  color: string;
 };
 
 const FourWaysSection: FC = () => {
   const { t } = useTranslation('market');
   const { classes } = useStyles();
 
-  const cards:FourWaysCard[] = [
+  const cards: FourWaysCard[] = [
     {
       title: t('four_ways.cards.0.title'),
       description: t('four_ways.cards.0.description'),
@@ -107,19 +107,6 @@ const FourWaysSection: FC = () => {
                   className={`${classes.fourWaysCardIndicator} fourWaysCardIndicator`}
                   style={{ color: card.color }}
                 >
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className={`${classes.fourWaysCardIndicatorIcon} fourWaysCardIndicatorIcon`}
-                  >
-                    <path d="M5 12h14M12 5l7 7-7 7" />
-                  </svg>
                 </div>
               </div>
             </motion.div>

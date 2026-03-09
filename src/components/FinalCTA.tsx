@@ -49,8 +49,8 @@ const FinalCTA = () => {
                     marginTop: '64px',
                     overflowX: 'auto',
                     paddingBottom: '60px', // Allow shadow overflow below
-                    paddingLeft: 'max(20px, calc((100vw - 1200px) / 2))', // Align start with bounded container text
-                    paddingRight: '20px',
+                    paddingLeft: 'clamp(20px, 5vw, 100px)', // True full-wide with max 100px margin
+                    paddingRight: 'clamp(20px, 5vw, 100px)',
                     display: 'flex',
                     gap: '24px', // Tighter gap for smaller cards
                     WebkitOverflowScrolling: 'touch',
