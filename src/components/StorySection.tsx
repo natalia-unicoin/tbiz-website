@@ -38,6 +38,7 @@ const storyBlocks = [
             "By opening access to opportunities traditionally reserved for institutional investors, the platform contributes to a more inclusive investment landscape."
         ],
         cta: { text: "Explore Unicorn Hunters", link: "https://unicornhunters.com" },
+        bgImage: getImagePath('assets/unicorn-hunters-bg.png'),
     },
     {
         id: "unicoin",
