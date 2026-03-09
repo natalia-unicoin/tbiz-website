@@ -52,10 +52,7 @@ const Hero = () => {
                     transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
                 >
                     <p className={classes.subtitle}>
-                        From transparency in digital work to a global ecosystem shaping the future of technology, investment, and digital assets.
-                    </p>
-                    <p className={classes.description}>
-                        What began as a mission to bring transparency and accountability to remote work has evolved into a broader ecosystem of companies dedicated to innovation, financial access, and digital transformation.
+                        From transparency in digital work to a global ecosystem <br className="hidden md:block" /> shaping the future of technology, investment, and digital assets.
                     </p>
                 </motion.div>
 

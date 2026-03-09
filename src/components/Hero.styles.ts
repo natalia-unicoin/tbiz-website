@@ -62,7 +62,7 @@ export const useStyles = makeStyles()((theme) => ({
         fontWeight: 600,
         letterSpacing: '0',
         color: '#FFFFFF', // White for video
-        marginBottom: theme.spacing(6), // Increased from 2 to give space before CTA
+        marginBottom: theme.spacing(12), // Dramatically increased to separate the button
         lineHeight: 1.2,
         [theme.breakpoints.up('md')]: {
             fontSize: '1.75rem',
