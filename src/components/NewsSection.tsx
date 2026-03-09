@@ -12,7 +12,7 @@ const MOCK_NEWS = [
         title: "Lorem ipsum dolor sit amet consectetur adipiscing elit",
         excerpt: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
         author: "Lorem Ipsum",
-        image: getImagePath('assets/tbiz-poster.jpg')
+        image: getImagePath('assets/news-placeholder.png')
     },
     {
         id: 2,
@@ -20,7 +20,7 @@ const MOCK_NEWS = [
         title: "Ut enim ad minim veniam quis nostrud exercitation",
         excerpt: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
         author: "Dolor Sit",
-        image: getImagePath('assets/unicoin-poster.jpg')
+        image: getImagePath('assets/news-placeholder.png')
     },
     {
         id: 3,
@@ -28,7 +28,7 @@ const MOCK_NEWS = [
         title: "Excepteur sint occaecat cupidatat non proident",
         excerpt: "Sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis.",
         author: "Amet Consectetur",
-        image: getImagePath('assets/unicorn-hunters-poster.jpg')
+        image: getImagePath('assets/news-placeholder.png')
     },
     {
         id: 4,
@@ -36,7 +36,7 @@ const MOCK_NEWS = [
         title: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur",
         excerpt: "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.",
         author: "Adipiscing Elit",
-        image: getImagePath('assets/sheworks-poster.jpg')
+        image: getImagePath('assets/news-placeholder.png')
     }
 ];
 
