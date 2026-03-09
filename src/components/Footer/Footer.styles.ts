@@ -26,7 +26,7 @@ const useStyles = makeStyles()((theme) => ({
   },
   footerBrandCol: {
     [theme.breakpoints.up('md')]: {
-      gridColumn: 'span 4 / span 4',
+      gridColumn: 'span 3',
     },
   },
   footerLogoWrapper: {
@@ -99,7 +99,6 @@ const useStyles = makeStyles()((theme) => ({
   footerPlatformCol: {
     [theme.breakpoints.up('md')]: {
       gridColumn: 'span 2',
-      gridColumnStart: 7,
     },
   },
   footerCommunityCol: {

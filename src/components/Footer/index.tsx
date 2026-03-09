@@ -1,5 +1,6 @@
 import { type FC } from 'react';
 import { LinkTarget } from '@tbiz/tb-types';
+import { getImagePath } from '@/utils/image';
 
 import {
   COMMUNITY_ITEMS,
@@ -19,8 +20,8 @@ const Footer: FC = () => {
           <div className={classes.footerBrandCol}>
             <div className={classes.footerLogoWrapper}>
               <img
-                src="/images/market/logo-full.png"
-                alt="The X Collective"
+                src={getImagePath('assets/tbiz-logo-black.svg')}
+                alt="TransparentBusiness Logo"
                 className={classes.footerLogoImg}
               />
             </div>
