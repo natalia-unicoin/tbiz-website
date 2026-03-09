@@ -28,7 +28,7 @@ const Footer = () => {
                     {/* Brand Column */}
                     <div className={classes.brandColumn}>
                         <div className={classes.logoWrapper}>
-                            <img src={getImagePath("images/logo/tbiz-iso-dark.png")} alt="TransparentBusiness Logo" className={classes.isotypeImage} />
+                            <img src={getImagePath("images/logo/tbiz-logo-dark.png")} alt="TransparentBusiness Logo" className={classes.isotypeImage} />
                         </div>
                         <p className={classes.description}>
                             A Transparent Institutional Platform for the Next Era of Digital Asset Governance.

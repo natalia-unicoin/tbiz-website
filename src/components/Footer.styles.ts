@@ -33,20 +33,24 @@ export const useStyles = makeStyles()((theme) => ({
     },
     brandColumn: {
         gridColumn: 'span 1 / span 1',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'flex-start', // Force left alignment
         [theme.breakpoints.up('md')]: {
             gridColumn: 'span 4 / span 4',
         }
     },
     logoWrapper: {
         display: 'flex',
-        alignItems: 'center',
-        gap: theme.spacing(1.5),
+        alignItems: 'flex-start', // Align to left side of wrapper
+        justifyContent: 'flex-start',
         marginBottom: theme.spacing(4), // mb-8
     },
     isotypeImage: {
-        height: '40px',
+        height: '40px', // Set back to normal logo height
         width: 'auto',
         objectFit: 'contain',
+        objectPosition: 'left center', // Ensure image itself aligns left
     },
     description: {
         color: theme.palette.text.secondary,
@@ -54,7 +58,8 @@ export const useStyles = makeStyles()((theme) => ({
         maxWidth: '24rem',
         marginBottom: theme.spacing(4),
         fontFamily: theme.typography.body1.fontFamily,
-        fontSize: '16px',
+        fontSize: '14px', // Slightly smaller for better Apple-style text hierarchy
+        textAlign: 'left', // Force left alignment
     },
     socialWrapper: {
         display: 'flex',
