@@ -48,8 +48,14 @@ const NewsSection = () => {
     );
 
     return (
-        <section style={{ backgroundColor: '#F9FAFB', padding: '120px 24px', borderTop: '1px solid #E5E7EB' }}>
-            <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
+        <section style={{ backgroundColor: '#F9FAFB', paddingBottom: '120px', paddingTop: '120px', borderTop: '1px solid #E5E7EB' }}>
+            <div style={{
+                width: '100vw',
+                marginLeft: 'calc(50% - 50vw)',
+                marginRight: 'calc(50% - 50vw)',
+                paddingLeft: 'clamp(20px, 5vw, 100px)',
+                paddingRight: 'clamp(20px, 5vw, 100px)'
+            }}>
                 <div style={{ textAlign: 'center', marginBottom: '48px' }}>
                     <h2 style={{ fontSize: '36px', fontWeight: 700, color: '#111827', marginBottom: '16px' }}>
                         Latest from the Ecosystem
@@ -97,7 +103,7 @@ const NewsSection = () => {
                             .news-grid {
                                 display: grid;
                                 grid-template-columns: 1fr;
-                                gap: 32px;
+                                gap: 20px;
                             }
                             @media (min-width: 768px) {
                                 .news-grid {

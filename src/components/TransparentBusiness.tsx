@@ -11,8 +11,8 @@ const TransparentBusiness = () => {
         <>
             <Hero />
             <StorySection />
-            <NewsSection />
             <FinalCTA />
+            <NewsSection />
         </>
     );
 };
