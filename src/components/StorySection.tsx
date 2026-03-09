@@ -15,7 +15,6 @@ const storyBlocks = [
             "As organizations increasingly relied on distributed teams and global talent, new tools were needed to manage work, productivity, and collaboration with clarity and trust.",
             "This vision laid the foundation for a broader ecosystem built around transparency, technology, and global opportunity."
         ],
-        image: 'assets/box-placeholder.jpg',
     },
     {
         id: "sheworks",
@@ -26,7 +25,6 @@ const storyBlocks = [
             "By enabling companies to access global talent and helping women participate in the digital economy, SheWorks became a leading community for the future of work.",
             "Today, the platform represents a powerful movement supporting professional growth, flexibility, and economic inclusion."
         ],
-        image: 'assets/sheworks-thumbnail.jpg',
         cta: { text: "Discover SheWorks", link: "https://sheworks.com" },
     },
     {
@@ -38,7 +36,6 @@ const storyBlocks = [
             "Through a unique platform that combines entertainment, entrepreneurship, and capital markets, Unicorn Hunters connects high-growth companies with investors around the world.",
             "By opening access to opportunities traditionally reserved for institutional investors, the platform contributes to a more inclusive investment landscape."
         ],
-        image: 'assets/uh-thumbnail.jpg',
         cta: { text: "Explore Unicorn Hunters", link: "https://unicornhunters.com" },
     },
     {
@@ -50,7 +47,6 @@ const storyBlocks = [
             "Unicoin was created as an asset-backed cryptocurrency designed to bring greater transparency and accountability to the crypto economy.",
             "Built on the principles of transparency and long-term value, the project aims to create a more stable and trustworthy model for digital finance."
         ],
-        image: 'assets/unicoin-thumbnail.jpg',
         cta: { text: "Learn about Unicoin", link: "https://unicoin.com" },
     },
     {
@@ -62,7 +58,6 @@ const storyBlocks = [
             "From remote work platforms to global investment media and digital assets, the ecosystem continues to evolve around the idea that transparency is essential for the future of organizations and markets.",
             "By combining technology, innovation, and global collaboration, the vision continues to expand into new industries and opportunities."
         ],
-        image: 'assets/box-placeholder.jpg',
     },
     {
         id: "global-ecosystem",
@@ -73,7 +68,6 @@ const storyBlocks = [
             "From technology platforms to media initiatives and digital assets, these projects share a common mission: building transparent systems that empower individuals, organizations, and investors worldwide.",
             "Through global teams, partnerships, and international recognition, the ecosystem continues to expand its presence around the world."
         ],
-        image: 'assets/box-placeholder.jpg',
     }
 ];
 
@@ -115,23 +109,6 @@ const StorySection = () => {
                 return (
                     <section key={block.id} className={classes.section} style={{ backgroundColor: currentBg }}>
                         <div className={classes.container}>
-
-                            {/* Optional Visual Content (First to match Apple UX rule) */}
-                            {block.image && (
-                                <motion.div
-                                    className={classes.visualContent}
-                                    initial={{ scale: 0.95, opacity: 0 }}
-                                    whileInView={{ opacity: 1, scale: 1 }}
-                                    viewport={{ once: true, margin: "-100px" }}
-                                    transition={{ duration: 1, ease: "easeOut" }}
-                                >
-                                    <img
-                                        src={getImagePath(block.image)}
-                                        alt={block.title}
-                                        className={classes.largeImage}
-                                    />
-                                </motion.div>
-                            )}
 
                             {/* Text Content */}
                             <motion.div
