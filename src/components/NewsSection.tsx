@@ -9,33 +9,33 @@ const MOCK_NEWS = [
     {
         id: 1,
         category: "TransparentBusiness",
-        title: "TransparentBusiness Announces New Cloud Initiative",
-        excerpt: "The latest milestone in bringing full visibility to distributed remote workforces.",
-        author: "Press Team",
+        title: "Lorem ipsum dolor sit amet consectetur adipiscing elit",
+        excerpt: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+        author: "Lorem Ipsum",
         image: getImagePath('assets/tbiz-poster.jpg')
     },
     {
         id: 2,
         category: "Unicoin",
-        title: "Unicoin Unveils Expandable Asset Portfolio",
-        excerpt: "Securing the future of digital currency through diversified real-world assets.",
-        author: "Investment Desk",
+        title: "Ut enim ad minim veniam quis nostrud exercitation",
+        excerpt: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        author: "Dolor Sit",
         image: getImagePath('assets/unicoin-poster.jpg')
     },
     {
         id: 3,
         category: "Unicorn Hunters",
-        title: "Season 2 Global Premiere Sets Viewership Records",
-        excerpt: "The pioneering business series returns, connecting massive audiences to pre-IPO opportunities.",
-        author: "Media Division",
+        title: "Excepteur sint occaecat cupidatat non proident",
+        excerpt: "Sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis.",
+        author: "Amet Consectetur",
         image: getImagePath('assets/unicorn-hunters-poster.jpg')
     },
     {
         id: 4,
         category: "SheWorks!",
-        title: "Empowering 100,000 Women in Tech Worldwide",
-        excerpt: "A new landmark initiative scales remote opportunities for female professionals globally.",
-        author: "Impact Team",
+        title: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur",
+        excerpt: "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.",
+        author: "Adipiscing Elit",
         image: getImagePath('assets/sheworks-poster.jpg')
     }
 ];
