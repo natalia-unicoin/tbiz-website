@@ -76,8 +76,8 @@ const FinalCTA = () => {
                         style={{
                             textDecoration: 'none',
                             display: 'block',
-                            minWidth: 'clamp(260px, 24vw, 420px)', // Precisely sizes the cards so 4 fit (with the last just cut off on 1080p, hinting at scroll)
-                            maxWidth: 'clamp(260px, 24vw, 420px)',
+                            minWidth: 'clamp(220px, 21vw, 360px)', // Smaller size to fit all 4
+                            maxWidth: 'clamp(220px, 21vw, 360px)',
                             flex: '0 0 auto',
                             borderRadius: '16px', // Standard modern radius
                             overflow: 'hidden',
