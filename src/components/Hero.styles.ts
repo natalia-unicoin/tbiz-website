@@ -87,8 +87,10 @@ export const useStyles = makeStyles()((theme) => ({
         flexDirection: 'column',
         gap: theme.spacing(2),
         justifyContent: 'center',
+        marginTop: theme.spacing(6), // Strict spacing to detach from text above
         [theme.breakpoints.up('md')]: {
             flexDirection: 'row',
+            marginTop: theme.spacing(10), // Even larger on desktop
         }
     },
     ctaButton: {
