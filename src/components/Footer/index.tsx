@@ -26,6 +26,14 @@ const Footer: FC = () => {
               />
             </div>
 
+            <div style={{ marginBottom: '1rem' }}>
+              <img
+                src={getImagePath('assets/tbiz-icon-dark.png')}
+                alt="TransparentBusiness Icon"
+                style={{ width: '40px', height: '40px', objectFit: 'contain' }}
+              />
+            </div>
+
             <p className={classes.footerBrandText}>
               Redefining wealth through community, creativity, and shared ownership.
             </p>
