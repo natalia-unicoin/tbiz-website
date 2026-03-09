@@ -42,90 +42,86 @@ const FinalCTA = () => {
 
             </div>
 
-            {/* 4-Column Card Grid Container */}
+            {/* 4-Column Card Grid Container with Exact 100px Margins on Desktop */}
             <motion.div
                 style={{
-                    width: '100%',
+                    width: '100vw',
+                    marginLeft: 'calc(50% - 50vw)',
+                    marginRight: 'calc(50% - 50vw)',
+                    paddingLeft: 'clamp(20px, 5vw, 100px)',
+                    paddingRight: 'clamp(20px, 5vw, 100px)',
                     marginTop: '64px',
-                    display: 'grid',
-                    gridTemplateColumns: 'repeat(1, 1fr)', // Mobile single column
-                    gap: '24px',
                 }}
-                className="final-cta-grid" // We'll rely on global or inline for breakpoints if we can't use style classes easily here, but actually we can just use a simple @media or predefined classes if available. In Next.js/Tailwind you'd use classes. Since this uses styled-components/MUI, let's use standard logic or add a class. Since we are inline styling, we can't easily do hover/breakpoints without a styles file.
-            // Let's use a standard grid trick to auto-fit, which is inherently responsive without media queries:
-            // gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))'
-            // This perfectly mimics the 4-column layout on wide screens while degrading gracefully.
             >
-                <style>
-                    {`
-                        .final-cta-grid {
-                            display: grid;
-                            grid-template-columns: 1fr;
-                            gap: 24px;
-                            width: 100%;
-                        }
-                        @media (min-width: 768px) {
+                <div
+                    className="final-cta-grid"
+                >
+                    <style>
+                        {`
                             .final-cta-grid {
-                                grid-template-columns: repeat(2, 1fr);
+                                display: grid;
+                                grid-template-columns: 1fr;
+                                gap: 20px; /* Exact 20px gutter */
+                                width: 100%;
                             }
-                        }
-                        @media (min-width: 1024px) {
-                            .final-cta-grid {
-                                grid-template-columns: repeat(4, 1fr);
+                            @media (min-width: 768px) {
+                                .final-cta-grid {
+                                    grid-template-columns: repeat(2, 1fr);
+                                }
                             }
-                        }
-                    `}
-                </style>
-                {[
-                    { title: "TransparentBusiness", link: "https://transparentbusiness.com", img: getImagePath('assets/tbiz-poster.jpg') },
-                    { title: "Unicoin", link: "https://unicoin.com", img: getImagePath('assets/unicoin-poster.jpg') },
-                    { title: "Unicorn Hunters", link: "https://unicornhunters.com", img: getImagePath('assets/unicorn-hunters-poster.jpg') },
-                    { title: "SheWorks!", link: "https://sheworks.com", img: getImagePath('assets/sheworks-poster.jpg') }
-                ].map((card, idx) => (
-                    <motion.a
-                        key={idx}
-                        href={card.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        style={{
-                            textDecoration: 'none',
-                            display: 'block',
-                            width: '100%',
-                            borderRadius: '16px', // Standard modern radius
-                            overflow: 'hidden',
-                            aspectRatio: '1', // Square like the Apple reference images, or slightly tall
-                            position: 'relative',
-                            backgroundColor: '#F9FAFB', // Light gray background for the card
-                            border: '1px solid #E5E7EB',
-                            padding: '24px',
-                            display: 'flex',
-                            flexDirection: 'column',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                        }}
-                        whileHover={{ scale: 1.02, y: -4 }}
-                        transition={{ duration: 0.3, ease: 'easeOut' }}
-                    >
-                        <div style={{
-                            width: '100%',
-                            height: '80%',
-                            position: 'relative',
-                            backgroundImage: `url(${card.img})`,
-                            backgroundSize: 'contain',
-                            backgroundRepeat: 'no-repeat',
-                            backgroundPosition: 'center',
-                            marginBottom: '16px',
-                        }} />
-                        <span style={{
-                            color: '#111827',
-                            fontWeight: 600,
-                            fontSize: '16px',
-                            textAlign: 'center'
-                        }}>
-                            {card.title}
-                        </span>
-                    </motion.a>
-                ))}
+                            @media (min-width: 1024px) {
+                                .final-cta-grid {
+                                    grid-template-columns: repeat(4, 1fr);
+                                }
+                            }
+                        `}
+                    </style>
+                    {[
+                        { title: "TransparentBusiness", link: "https://transparentbusiness.com", img: getImagePath('assets/tbiz-poster.jpg') },
+                        { title: "Unicoin", link: "https://unicoin.com", img: getImagePath('assets/unicoin-poster.jpg') },
+                        { title: "Unicorn Hunters", link: "https://unicornhunters.com", img: getImagePath('assets/unicorn-hunters-poster.jpg') },
+                        { title: "SheWorks!", link: "https://sheworks.com", img: getImagePath('assets/sheworks-poster.jpg') }
+                    ].map((card, idx) => (
+                        <motion.a
+                            key={idx}
+                            href={card.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            style={{
+                                textDecoration: 'none',
+                                display: 'block',
+                                width: '100%',
+                                borderRadius: '16px', // Standard modern radius
+                                overflow: 'hidden',
+                                aspectRatio: '16/9', // Wider than tall
+                                position: 'relative',
+                                backgroundColor: '#1E293B', // Dark background for the card
+                                boxShadow: '0 25px 50px -12px rgba(0,0,0,0.5)',
+                            }}
+                            whileHover={{ scale: 1.02, y: -4 }}
+                            transition={{ duration: 0.3, ease: 'easeOut' }}
+                        >
+                            <div style={{
+                                width: '100%',
+                                height: '100%',
+                                position: 'absolute',
+                                inset: 0,
+                                backgroundImage: `url(${card.img})`,
+                                backgroundSize: 'cover',
+                                backgroundRepeat: 'no-repeat',
+                                backgroundPosition: 'center',
+                            }} />
+                            <span style={{
+                                color: '#111827',
+                                fontWeight: 600,
+                                fontSize: '16px',
+                                textAlign: 'center'
+                            }}>
+                                {card.title}
+                            </span>
+                        </motion.a>
+                    ))}
+                </div>
             </motion.div>
         </section>
     );
