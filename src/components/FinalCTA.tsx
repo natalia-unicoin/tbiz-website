@@ -65,86 +65,45 @@ const FinalCTA = () => {
                         transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
                     >
                         {[
-                            { title: "TransparentBusiness", desc: "Technology infrastructure focused on transparency in digital operations.", link: "https://transparentbusiness.com", img: getImagePath('assets/box-placeholder.jpg') },
-                            { title: "Unicoin", desc: "An asset-backed digital asset designed to bring transparency to the crypto economy.", link: "https://unicoin.com", img: getImagePath('assets/unicoin-thumbnail.jpg') },
-                            { title: "Unicorn Hunters", desc: "A global media platform connecting innovative companies with investors.", link: "https://unicornhunters.com", img: getImagePath('assets/uh-thumbnail.jpg') },
-                            { title: "SheWorks!", desc: "A global community empowering women through remote work opportunities.", link: "https://sheworks.com", img: getImagePath('assets/sheworks-thumbnail.jpg') }
+                            { title: "TransparentBusiness", link: "https://transparentbusiness.com", img: getImagePath('assets/box-placeholder.jpg') },
+                            { title: "Unicoin", link: "https://unicoin.com", img: getImagePath('assets/box-placeholder.jpg') },
+                            { title: "Unicorn Hunters", link: "https://unicornhunters.com", img: getImagePath('assets/box-placeholder.jpg') },
+                            { title: "SheWorks!", link: "https://sheworks.com", img: getImagePath('assets/sheworks-poster.jpg') }
                         ].map((card, idx) => (
                             <motion.a
                                 key={idx}
                                 href={card.link}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                style={{ textDecoration: 'none', display: 'block', minWidth: '340px', maxWidth: '340px', flex: '0 0 auto' }}
-                                whileHover={{ y: -8 }}
+                                style={{
+                                    textDecoration: 'none',
+                                    display: 'block',
+                                    minWidth: '640px', // Large Apple TV Style
+                                    maxWidth: '640px',
+                                    flex: '0 0 auto',
+                                    borderRadius: '24px',
+                                    overflow: 'hidden',
+                                    aspectRatio: '16/9',
+                                    position: 'relative'
+                                }}
+                                whileHover={{ scale: 1.03, y: -8 }}
                                 transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
                             >
                                 <div style={{
-                                    backgroundColor: '#FFFFFF',
-                                    borderRadius: '24px',
-                                    overflow: 'hidden',
-                                    display: 'flex',
-                                    flexDirection: 'column',
-                                    paddingTop: '40px',
-                                    height: '520px',
-                                    transition: 'all 0.4s cubic-bezier(0.16, 1, 0.3, 1)',
-                                    boxShadow: '0 10px 30px rgba(0,0,0,0.06)',
-                                }}
-                                    className="card-container"
-                                >
-                                    {/* Text Content */}
-                                    <div style={{
-                                        padding: '0 24px',
-                                        textAlign: 'center',
-                                        position: 'relative',
-                                        zIndex: 10,
-                                        display: 'flex',
-                                        flexDirection: 'column',
-                                        backgroundColor: '#FFFFFF', // Guarantee white behind text
-                                    }}>
-                                        <h3 style={{
-                                            fontSize: '1.5rem',
-                                            fontWeight: 800,
-                                            color: '#000000', // Absolute black
-                                            margin: 0,
-                                            letterSpacing: '-0.02em',
-                                            fontFamily: "'Inter', sans-serif"
-                                        }}>{card.title}</h3>
-                                        <p style={{
-                                            color: '#333333',
-                                            fontSize: '1rem',
-                                            marginTop: '12px',
-                                            marginBottom: '16px',
-                                            lineHeight: 1.5,
-                                            fontFamily: "'Inter', sans-serif"
-                                        }}>{card.desc}</p>
-                                        <span style={{
-                                            color: '#0066CC',
-                                            fontSize: '14px',
-                                            fontWeight: 600,
-                                            fontFamily: "'Inter', sans-serif"
-                                        }}>
-                                            Learn more &gt;
-                                        </span>
-                                    </div>
-
-                                    {/* Image Content */}
-                                    <div style={{
-                                        width: '100%',
-                                        flex: 1,
-                                        marginTop: '40px',
-                                        position: 'relative',
-                                        overflow: 'hidden'
-                                    }}>
-                                        <div className="bg-img" style={{
-                                            position: 'absolute',
-                                            inset: 0,
-                                            backgroundImage: `url(${card.img})`,
-                                            backgroundSize: 'cover',
-                                            backgroundPosition: 'center',
-                                            transition: 'transform 0.7s ease',
-                                        }} />
-                                    </div>
+                                    width: '100%',
+                                    height: '100%',
+                                    position: 'relative',
+                                    backgroundColor: '#1E293B', // Subtle fallback
+                                    boxShadow: '0 20px 40px rgba(0,0,0,0.4)',
+                                }}>
+                                    <div className="bg-img" style={{
+                                        position: 'absolute',
+                                        inset: 0,
+                                        backgroundImage: `url(${card.img})`,
+                                        backgroundSize: 'cover',
+                                        backgroundPosition: 'center',
+                                        transition: 'transform 0.7s ease',
+                                    }} />
                                 </div>
                             </motion.a>
                         ))}

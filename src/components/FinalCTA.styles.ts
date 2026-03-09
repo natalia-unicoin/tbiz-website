@@ -7,7 +7,7 @@ export const useStyles = makeStyles()((theme) => ({
         textAlign: 'center',
         position: 'relative',
         overflow: 'hidden',
-        backgroundColor: '#F5F5F7', // Clean Apple-style light gray
+        backgroundColor: '#0F1626', // Deep dark theater mode for Apple TV style
     },
     container: {
         maxWidth: '100%',
@@ -34,17 +34,17 @@ export const useStyles = makeStyles()((theme) => ({
         [theme.breakpoints.up('lg')]: {
             fontSize: '72px',
         },
-        color: '#111827',
+        color: '#FFFFFF', // White for dark background
         textWrap: 'balance',
     },
     subtitle: {
         fontSize: '18px',
         lineHeight: '1.6',
-        color: 'rgba(255, 255, 255, 0.9)', // Clean white with slight transparency
+        color: '#9CA3AF', // Gray for contrast
         maxWidth: '700px',
         margin: '0 auto',
         marginBottom: theme.spacing(8),
-        fontWeight: 700,
+        fontWeight: 400,
         [theme.breakpoints.up('md')]: {
             fontSize: '24px',
         },
