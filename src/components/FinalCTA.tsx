@@ -67,7 +67,7 @@ const FinalCTA = () => {
                         {[
                             { title: "TransparentBusiness", link: "https://transparentbusiness.com", img: getImagePath('assets/box-placeholder.jpg') },
                             { title: "Unicoin", link: "https://unicoin.com", img: getImagePath('assets/box-placeholder.jpg') },
-                            { title: "Unicorn Hunters", link: "https://unicornhunters.com", img: getImagePath('assets/box-placeholder.jpg') },
+                            { title: "Unicorn Hunters", link: "https://unicornhunters.com", img: getImagePath('assets/unicorn-hunters-poster.jpg') },
                             { title: "SheWorks!", link: "https://sheworks.com", img: getImagePath('assets/sheworks-poster.jpg') }
                         ].map((card, idx) => (
                             <motion.a
