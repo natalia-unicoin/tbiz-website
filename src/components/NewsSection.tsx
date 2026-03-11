@@ -82,8 +82,8 @@ const NewsSection = () => {
     return (
         <section style={{ position: 'relative', backgroundColor: '#F9FAFB', paddingBottom: '120px', paddingTop: '120px', borderTop: '1px solid #E5E7EB', overflow: 'hidden' }}>
             {/* Background Image & Overlay */}
-            <div style={{ position: 'absolute', inset: 0, backgroundImage: 'url("/assets/news-bg.jpg")', backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed', zIndex: 0 }}></div>
-            <div style={{ position: 'absolute', inset: 0, backgroundColor: 'rgba(255, 255, 255, 0.85)', zIndex: 1 }}></div>
+            <div style={{ position: 'absolute', inset: 0, backgroundImage: 'url("/assets/news-bg-v2.png")', backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed', zIndex: 0 }}></div>
+            <div style={{ position: 'absolute', inset: 0, backgroundColor: 'rgba(255, 255, 255, 0.2)', zIndex: 1 }}></div>
 
             <div style={{
                 position: 'relative',
