@@ -9,6 +9,7 @@ const storyBlocks = [
     {
         id: "origins",
         eyebrow: "Origins + Founders",
+        logoImage: getImagePath('assets/logo-tbiz-white.png'),
         title: "Where the Vision Began",
         description: [
             "The journey began with a simple but powerful idea: bring transparency and accountability to digital work.",
