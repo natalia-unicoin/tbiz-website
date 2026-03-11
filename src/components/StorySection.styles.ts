@@ -56,7 +56,7 @@ export const useStyles = makeStyles()((theme) => ({
         }
     },
     eyebrow: {
-        fontSize: '0.875rem',
+        fontSize: '16px',
         fontWeight: 700,
         textTransform: 'uppercase',
         letterSpacing: '0.15em',
@@ -180,13 +180,16 @@ export const useStyles = makeStyles()((theme) => ({
         color: '#111827',
     },
     descriptionSmall: {
-        fontSize: '1.125rem',
+        fontSize: '18px',
         color: '#6B7280',
-        lineHeight: 1.5,
-        marginBottom: theme.spacing(4),
-        maxWidth: '600px',
+        lineHeight: 1.6,
+        marginBottom: theme.spacing(6),
+        maxWidth: '900px',
         margin: '0 auto',
         paddingBottom: theme.spacing(4),
+        [theme.breakpoints.up('md')]: {
+            fontSize: '24px',
+        }
     },
     ctaButtonOutline: {
         display: 'inline-block',
