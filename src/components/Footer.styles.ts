@@ -2,130 +2,109 @@ import { makeStyles } from 'tss-react/mui';
 
 export const useStyles = makeStyles()((theme) => ({
     footer: {
-        backgroundColor: theme.palette.background.default,
-        color: theme.palette.text.primary,
-        paddingTop: theme.spacing(12), // Huge padding
-        paddingBottom: theme.spacing(10),
-        borderTop: `1px solid ${theme.palette.mode === 'dark' ? 'rgba(255,255,255,0.05)' : 'rgba(0,0,0,0.05)'}`,
+        backgroundColor: '#FFFFFF', // Clean white
+        color: '#111827',
+        paddingTop: theme.spacing(10),
+        paddingBottom: theme.spacing(6),
+        borderTop: '1px solid #E5E7EB', // Light divider
     },
     container: {
-        maxWidth: '100%',
-        marginLeft: 'auto',
-        marginRight: 'auto',
-        paddingLeft: theme.spacing(3), // px-6
-        paddingRight: theme.spacing(3),
-        [theme.breakpoints.up('lg')]: {
-            paddingLeft: '150px',
-            paddingRight: '150px',
-        }
+        maxWidth: '1200px',
+        margin: '0 auto',
+        paddingLeft: theme.spacing(4),
+        paddingRight: theme.spacing(4),
     },
     mainGrid: {
         display: 'grid',
-        gridTemplateColumns: 'repeat(1, minmax(0, 1fr))',
+        gridTemplateColumns: 'minmax(0, 1fr)',
         gap: theme.spacing(6),
         marginBottom: theme.spacing(10),
-        [theme.breakpoints.up('sm')]: {
-            gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',
-        },
         [theme.breakpoints.up('md')]: {
             gridTemplateColumns: 'repeat(12, minmax(0, 1fr))',
+            gap: theme.spacing(4),
         }
     },
     brandColumn: {
         gridColumn: 'span 1 / span 1',
         display: 'flex',
         flexDirection: 'column',
-        alignItems: 'flex-start', // Force left alignment
+        alignItems: 'flex-start',
         [theme.breakpoints.up('md')]: {
-            gridColumn: 'span 4 / span 4',
+            gridColumn: 'span 5 / span 5',
+            paddingRight: theme.spacing(6),
         }
     },
     logoWrapper: {
         display: 'flex',
-        alignItems: 'flex-start', // Align to left side of wrapper
+        alignItems: 'flex-start',
         justifyContent: 'flex-start',
-        marginBottom: theme.spacing(4), // mb-8
+        marginBottom: theme.spacing(3),
     },
     isotypeImage: {
-        height: '40px', // Set back to normal logo height
+        height: '32px', // Slightly smaller, refined logo
         width: 'auto',
         objectFit: 'contain',
-        objectPosition: 'left center', // Ensure image itself aligns left
+        objectPosition: 'left center',
     },
     description: {
-        color: theme.palette.text.secondary,
-        lineHeight: 1.625,
+        color: '#6B7280', // Lighter text for secondary info
+        lineHeight: 1.6,
         maxWidth: '24rem',
         marginBottom: theme.spacing(4),
         fontFamily: theme.typography.body1.fontFamily,
-        fontSize: '14px', // Slightly smaller for better Apple-style text hierarchy
-        textAlign: 'left', // Force left alignment
+        fontSize: '14px',
+        textAlign: 'left',
     },
     socialWrapper: {
         display: 'flex',
         alignItems: 'center',
-        gap: theme.spacing(3),
+        gap: theme.spacing(2),
     },
     socialIcon: {
-        width: '48px',
-        height: '48px',
-        borderRadius: '50%',
-        backgroundColor: theme.palette.mode === 'dark' ? 'rgba(255,255,255,0.05)' : 'rgba(0,0,0,0.04)',
+        width: '36px',
+        height: '36px',
+        borderRadius: '8px', // Slightly rounded square like reference
+        backgroundColor: '#F3F4F6', // Light gray background
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        color: theme.palette.text.primary,
-        transition: 'all 0.3s',
+        color: '#4B5563',
+        transition: 'all 0.2s',
         '&:hover': {
-            backgroundColor: theme.palette.text.primary,
-            color: theme.palette.background.default,
-            boxShadow: 'none',
-        }
-    },
-    socialSvg: {
-        transition: 'transform 0.3s',
-        '&:hover': {
-            transform: 'scale(1.1)',
+            backgroundColor: '#111827',
+            color: '#FFFFFF',
         }
     },
     // Links Columns
-    linksColumn: {
-        gridColumn: 'span 1 / span 1',
-        [theme.breakpoints.up('md')]: {
-            gridColumn: 'span 2 / span 2',
-        }
-    },
     linksColumnFirst: {
         gridColumn: 'span 1 / span 1',
         [theme.breakpoints.up('md')]: {
             gridColumn: 'span 2 / span 2',
-            gridColumnStart: 5, // Moved from 6
+            gridColumnStart: 7,
         }
     },
     linksColumnSecond: {
         gridColumn: 'span 1 / span 1',
         [theme.breakpoints.up('md')]: {
             gridColumn: 'span 2 / span 2',
-            gridColumnStart: 7, // Moved from 9
+            gridColumnStart: 9,
         }
     },
-    socialColumn: {
+    linksColumnThird: {
         gridColumn: 'span 1 / span 1',
         [theme.breakpoints.up('md')]: {
-            gridColumn: 'span 3 / span 3',
-            gridColumnStart: 10,
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'flex-end',
+            gridColumn: 'span 2 / span 2',
+            gridColumnStart: 11,
         }
     },
     columnTitle: {
-        fontFamily: theme.typography.h1.fontFamily,
-        fontWeight: 600,
-        fontSize: '18px',
-        letterSpacing: '0.05em',
+        fontFamily: theme.typography.body1.fontFamily,
+        fontWeight: 700,
+        fontSize: '11px',
+        letterSpacing: '0.1em',
+        textTransform: 'uppercase',
         marginBottom: theme.spacing(3),
-        color: theme.palette.text.primary,
+        color: '#9CA3AF', // Gray for headings
     },
     linkList: {
         listStyle: 'none',
@@ -134,46 +113,28 @@ export const useStyles = makeStyles()((theme) => ({
         display: 'flex',
         flexDirection: 'column',
         gap: theme.spacing(2),
-        color: theme.palette.text.secondary,
     },
     linkItem: {
-        color: 'inherit',
+        color: '#4B5563',
         textDecoration: 'none',
         fontFamily: theme.typography.body1.fontFamily,
-        fontSize: '16px',
+        fontSize: '14px',
         transition: 'color 0.2s',
         '&:hover': {
-            color: theme.palette.text.primary,
+            color: '#111827',
         }
     },
     // Bottom Bar
     bottomBar: {
         paddingTop: theme.spacing(4),
-        borderTop: `1px solid ${theme.palette.mode === 'dark' ? 'rgba(255,255,255,0.05)' : 'rgba(0,0,0,0.05)'}`,
-    },
-    tagline: {
+        borderTop: '1px solid #E5E7EB',
         display: 'flex',
         flexDirection: 'column',
-        justifyContent: 'space-between',
         alignItems: 'center',
-        marginTop: theme.spacing(6),
         gap: theme.spacing(3),
-        fontSize: '10px',
-        fontFamily: theme.typography.h1.fontFamily, // Montserrat
-        fontWeight: 600,
-        letterSpacing: '0.2em',
-        textTransform: 'uppercase', // Enforce uppercase
-        color: theme.palette.text.secondary,
         [theme.breakpoints.up('md')]: {
             flexDirection: 'row',
-            fontSize: '12px',
-        }
-    },
-    separator: {
-        display: 'none',
-        color: theme.palette.mode === 'dark' ? 'rgba(255,255,255,0.2)' : 'rgba(0,0,0,0.2)',
-        [theme.breakpoints.up('md')]: {
-            display: 'block',
+            justifyContent: 'space-between',
         }
     },
     legalLinksBar: {
@@ -181,36 +142,33 @@ export const useStyles = makeStyles()((theme) => ({
         flexWrap: 'wrap',
         justifyContent: 'center',
         alignItems: 'center',
-        gap: theme.spacing(2),
-        marginTop: 0,
+        gap: theme.spacing(3),
+        order: 2,
         [theme.breakpoints.up('md')]: {
-            gap: theme.spacing(3),
+            order: 2,
+            justifyContent: 'flex-end',
         }
     },
     bottomLegalLink: {
-        color: theme.palette.text.secondary,
+        color: '#6B7280',
         fontSize: '12px',
         fontFamily: theme.typography.body1.fontFamily,
         textDecoration: 'none',
         transition: 'color 0.2s',
         '&:hover': {
-            color: theme.palette.text.primary,
+            color: '#111827',
         }
     },
-    legalSeparator: {
-        color: theme.palette.mode === 'dark' ? 'rgba(255,255,255,0.2)' : 'rgba(0,0,0,0.2)',
-        fontSize: '12px',
-    },
     copyright: {
-        marginTop: theme.spacing(8),
-        display: 'flex',
-        justifyContent: 'center',
         fontSize: '12px',
         fontFamily: theme.typography.body1.fontFamily,
-        color: theme.palette.text.secondary,
+        color: '#6B7280',
+        order: 1,
+        [theme.breakpoints.up('md')]: {
+            order: 1,
+        }
     },
     copyrightBrand: {
         whiteSpace: 'nowrap',
-        fontWeight: 700,
     }
 }));
