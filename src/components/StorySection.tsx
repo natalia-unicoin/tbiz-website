@@ -80,16 +80,20 @@ const storyBlocks = [
 const WarOnCryptoSection = () => {
     const { classes } = useStyles();
     return (
-        <section className={classes.warSection}>
-            <div className={classes.warContainer}>
-                <span className={classes.eyebrow}>
+        <section className={classes.warSection} style={{ position: 'relative', overflow: 'hidden', borderTop: 'none', padding: '120px 0' }}>
+            {/* Background Image & Dark Overlay for War on Crypto */}
+            <div style={{ position: 'absolute', inset: 0, backgroundImage: 'url("/assets/war-bg.jpg")', backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed', zIndex: 0 }}></div>
+            <div style={{ position: 'absolute', inset: 0, backgroundColor: 'rgba(17, 24, 39, 0.7)', zIndex: 1 }}></div>
+
+            <div className={classes.warContainer} style={{ position: 'relative', zIndex: 10 }}>
+                <span className={classes.eyebrow} style={{ color: '#E5E7EB' }}>
                     STANDING FOR TRANSPARENCY
                 </span>
-                <h2 className={classes.titleSmall}>
+                <h2 className={classes.titleSmall} style={{ color: '#FFFFFF' }}>
                     War on Crypto
                 </h2>
 
-                <p className={classes.descriptionSmall}>
+                <p className={classes.descriptionSmall} style={{ color: 'rgba(255, 255, 255, 0.9)' }}>
                     The U.S. Securities and Exchange Commission (SEC) has filed charges against Unicoin, alleging fraudulent practices in the promotion and sale of digital assets. These blatantly false accusations are part of a broader "regulation by enforcement" strategy that has been widely questioned by various stakeholders, including 18 U.S. states that have sued the SEC for overstepping its regulatory authority.
                 </p>
 
