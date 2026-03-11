@@ -9,10 +9,14 @@ export const useStyles = makeStyles()((theme) => ({
         borderTop: '1px solid #E5E7EB', // Light divider
     },
     container: {
-        maxWidth: '1200px',
+        width: '100%',
         margin: '0 auto',
         paddingLeft: theme.spacing(4),
         paddingRight: theme.spacing(4),
+        [theme.breakpoints.up('lg')]: {
+            paddingLeft: '100px',
+            paddingRight: '100px',
+        }
     },
     mainGrid: {
         display: 'grid',
@@ -41,7 +45,7 @@ export const useStyles = makeStyles()((theme) => ({
         marginBottom: theme.spacing(3),
     },
     isotypeImage: {
-        height: '32px', // Slightly smaller, refined logo
+        height: '64px', // Bigger geometric logo
         width: 'auto',
         objectFit: 'contain',
         objectPosition: 'left center',

@@ -41,7 +41,7 @@ const Footer = () => {
                     {/* Brand Column */}
                     <div className={classes.brandColumn}>
                         <div className={classes.logoWrapper}>
-                            <img src={getImagePath("assets/tbiz-logo-black.svg")} alt="TransparentBusiness Logo" className={classes.isotypeImage} />
+                            <img src={getImagePath("assets/tbiz-icon-dark.png")} alt="TransparentBusiness Icon" className={classes.isotypeImage} />
                         </div>
                         <p className={classes.description}>
                             TransparentBusiness powers the next era of digital asset governance. We build transparent institutional platforms that bridge traditional business with blockchain innovation.
