@@ -72,6 +72,53 @@ const Hero = () => {
 
             </div>
 
+            {/* Scroll Indicator */}
+            <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1, delay: 1 }}
+                style={{
+                    position: 'absolute',
+                    bottom: '40px',
+                    left: '50%',
+                    transform: 'translateX(-50%)',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    zIndex: 10
+                }}
+            >
+                <div style={{
+                    width: '32px',
+                    height: '52px',
+                    borderRadius: '20px',
+                    border: '2px solid rgba(255, 255, 255, 0.4)',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    paddingTop: '8px',
+                    position: 'relative'
+                }}>
+                    <motion.div
+                        animate={{
+                            y: [0, 20, 0],
+                            opacity: [1, 0, 1]
+                        }}
+                        transition={{
+                            duration: 2,
+                            repeat: Infinity,
+                            ease: "easeInOut"
+                        }}
+                        style={{
+                            width: '4px',
+                            height: '10px',
+                            backgroundColor: '#FFFFFF',
+                            borderRadius: '2px'
+                        }}
+                    />
+                </div>
+            </motion.div>
+
             {/* Modal */}
             <AnimatePresence>
                 {isModalOpen && (
