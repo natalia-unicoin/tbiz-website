@@ -81,18 +81,45 @@ const WarOnCryptoSection = () => {
     const { classes } = useStyles();
     return (
         <section className={classes.warSection}>
-            <div className={classes.warContainer}>
-                <span className={classes.eyebrow}>War on Crypto</span>
-                <h2 className={classes.titleSmall}>Standing for Transparency</h2>
-                <div className={classes.warGrid} style={{ gridTemplateColumns: '1fr', maxWidth: '800px', margin: '0 auto' }}>
-                    <div className={classes.warCard}>
-                        <p className={classes.descriptionSmall} style={{ fontSize: '1.125rem', lineHeight: 1.8 }}>
-                            The U.S. Securities and Exchange Commission (SEC) has filed charges against Unicoin, alleging fraudulent practices in the promotion and sale of digital assets. These blatantly false accusations are part of a broader "regulation by enforcement" strategy that has been widely questioned by various stakeholders, including 18 U.S. states that have sued the SEC for overstepping its regulatory authority.
-                        </p>
-                    </div>
+            <div className={classes.warContainer} style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
+                <span className={classes.eyebrow} style={{ color: '#9CA3AF', letterSpacing: '0.1em', fontSize: '0.875rem' }}>WAR ON CRYPTO</span>
+                <h2 className={classes.titleSmall} style={{ fontSize: '2.5rem', marginBottom: '2rem', color: '#111827' }}>Standing for Transparency</h2>
+
+                <div style={{
+                    backgroundColor: '#F9FAFB',
+                    borderRadius: '24px',
+                    padding: '3rem',
+                    marginBottom: '2rem'
+                }}>
+                    <p className={classes.descriptionSmall} style={{ fontSize: '1.125rem', lineHeight: 1.8, color: '#6B7280', margin: 0 }}>
+                        The U.S. Securities and Exchange Commission (SEC) has filed charges against Unicoin, alleging fraudulent practices in the promotion and sale of digital assets. These blatantly false accusations are part of a broader "regulation by enforcement" strategy that has been widely questioned by various stakeholders, including 18 U.S. states that have sued the SEC for overstepping its regulatory authority.
+                    </p>
                 </div>
-                <a href="https://unicoin.com/war-on-crypto" target="_blank" rel="noopener noreferrer" className={classes.ctaButtonOutline}>
-                    Read more
+
+                <a href="https://unicoin.com/war-on-crypto" target="_blank" rel="noopener noreferrer"
+                    style={{
+                        display: 'inline-block',
+                        padding: '12px 32px',
+                        borderRadius: '30px',
+                        border: '2px solid #111827',
+                        color: '#111827',
+                        fontWeight: 700,
+                        textTransform: 'uppercase',
+                        letterSpacing: '0.05em',
+                        textDecoration: 'none',
+                        transition: 'all 0.2s ease',
+                        fontSize: '0.875rem'
+                    }}
+                    onMouseEnter={(e) => {
+                        e.currentTarget.style.backgroundColor = '#111827';
+                        e.currentTarget.style.color = '#FFFFFF';
+                    }}
+                    onMouseLeave={(e) => {
+                        e.currentTarget.style.backgroundColor = 'transparent';
+                        e.currentTarget.style.color = '#111827';
+                    }}
+                >
+                    READ MORE
                 </a>
             </div>
         </section>
