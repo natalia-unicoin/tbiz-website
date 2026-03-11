@@ -3,39 +3,55 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { getImagePath } from '@/utils/image';
 
-const categories = ["All", "TransparentBusiness", "Unicoin", "Unicorn Hunters", "SheWorks!"];
+const categories = ["All", "Unicoin", "Unicorn Hunters", "TransparentBusiness", "SheWorks!"];
 
 const MOCK_NEWS = [
     {
         id: 1,
-        category: "TransparentBusiness",
-        title: "Lorem ipsum dolor sit amet consectetur adipiscing elit",
-        excerpt: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
-        author: "Lorem Ipsum",
+        category: "Unicoin",
+        title: "Unicoin Announces Major Global Expansion",
+        excerpt: "The asset-backed cryptocurrency expands its reach to new international markets.",
+        author: "Unicoin Team",
         image: getImagePath('assets/news-placeholder.png')
     },
     {
         id: 2,
-        category: "Unicoin",
-        title: "Ut enim ad minim veniam quis nostrud exercitation",
-        excerpt: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-        author: "Dolor Sit",
+        category: "Unicorn Hunters",
+        title: "New Season of Unicorn Hunters Premieres",
+        excerpt: "Watch global leaders and investors discover the next billion-dollar ideas.",
+        author: "UH Press",
         image: getImagePath('assets/news-placeholder.png')
     },
     {
         id: 3,
-        category: "Unicorn Hunters",
-        title: "Excepteur sint occaecat cupidatat non proident",
-        excerpt: "Sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis.",
-        author: "Amet Consectetur",
+        category: "Unicoin",
+        title: "Strategic Partnerships Drive Unicoin Adoption",
+        excerpt: "New alliances established to provide real estate and corporate backing for the token.",
+        author: "Unicoin Team",
         image: getImagePath('assets/news-placeholder.png')
     },
     {
         id: 4,
+        category: "Unicorn Hunters",
+        title: "Spotlight on Emerging Tech Startups",
+        excerpt: "This week's episode features groundbreaking advancements in clean energy.",
+        author: "UH Press",
+        image: getImagePath('assets/news-placeholder.png')
+    },
+    {
+        id: 5,
+        category: "TransparentBusiness",
+        title: "Remote Work Platform Focus Continues",
+        excerpt: "A look back at how TransparentBusiness paved the way for modern remote work coordination.",
+        author: "TBIZ Archive",
+        image: getImagePath('assets/news-placeholder.png')
+    },
+    {
+        id: 6,
         category: "SheWorks!",
-        title: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur",
-        excerpt: "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.",
-        author: "Adipiscing Elit",
+        title: "Empowering Women in the Global Workforce",
+        excerpt: "Celebrating the continued impact of connecting talented women with flexible opportunities.",
+        author: "SheWorks Archive",
         image: getImagePath('assets/news-placeholder.png')
     }
 ];
