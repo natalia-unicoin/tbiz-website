@@ -16,14 +16,6 @@ const MOCK_NEWS = [
     },
     {
         id: 2,
-        category: "Unicorn Hunters",
-        title: "New Season of Unicorn Hunters Premieres",
-        excerpt: "Watch global leaders and investors discover the next billion-dollar ideas.",
-        author: "UH Press",
-        image: getImagePath('assets/news-placeholder.png')
-    },
-    {
-        id: 3,
         category: "Unicoin",
         title: "Strategic Partnerships Drive Unicoin Adoption",
         excerpt: "New alliances established to provide real estate and corporate backing for the token.",
@@ -31,7 +23,31 @@ const MOCK_NEWS = [
         image: getImagePath('assets/news-placeholder.png')
     },
     {
+        id: 3,
+        category: "Unicoin",
+        title: "Unicoin Featured on Major Financial Networks",
+        excerpt: "The token's unique asset-backed model draws attention from top financial analysts and media.",
+        author: "Unicoin Press",
+        image: getImagePath('assets/news-placeholder.png')
+    },
+    {
         id: 4,
+        category: "Unicoin",
+        title: "New Milestones Reached in Tokenization Strategy",
+        excerpt: "A landmark achievement in seamlessly integrating real-world assets into the blockchain ecosystem.",
+        author: "Unicoin Team",
+        image: getImagePath('assets/news-placeholder.png')
+    },
+    {
+        id: 5,
+        category: "Unicorn Hunters",
+        title: "New Season of Unicorn Hunters Premieres",
+        excerpt: "Watch global leaders and investors discover the next billion-dollar ideas.",
+        author: "UH Press",
+        image: getImagePath('assets/news-placeholder.png')
+    },
+    {
+        id: 6,
         category: "Unicorn Hunters",
         title: "Spotlight on Emerging Tech Startups",
         excerpt: "This week's episode features groundbreaking advancements in clean energy.",
@@ -39,7 +55,7 @@ const MOCK_NEWS = [
         image: getImagePath('assets/news-placeholder.png')
     },
     {
-        id: 5,
+        id: 7,
         category: "TransparentBusiness",
         title: "Remote Work Platform Focus Continues",
         excerpt: "A look back at how TransparentBusiness paved the way for modern remote work coordination.",
@@ -47,7 +63,7 @@ const MOCK_NEWS = [
         image: getImagePath('assets/news-placeholder.png')
     },
     {
-        id: 6,
+        id: 8,
         category: "SheWorks!",
         title: "Empowering Women in the Global Workforce",
         excerpt: "Celebrating the continued impact of connecting talented women with flexible opportunities.",
@@ -57,11 +73,11 @@ const MOCK_NEWS = [
 ];
 
 const NewsSection = () => {
-    const [activeFilter, setActiveFilter] = useState("All");
+    const [activeFilter, setActiveFilter] = useState("Unicoin");
 
     const filteredNews = MOCK_NEWS.filter(
         item => activeFilter === "All" || item.category === activeFilter
-    );
+    ).slice(0, 4);
 
     return (
         <section style={{ backgroundColor: '#F9FAFB', paddingBottom: '120px', paddingTop: '120px', borderTop: '1px solid #E5E7EB' }}>
