@@ -84,7 +84,7 @@ const WarOnCryptoSection = () => {
         <section className={classes.warSection} style={{ position: 'relative', overflow: 'hidden', borderTop: 'none', padding: '120px 0' }}>
             {/* Background Image & Dark Overlay for War on Crypto */}
             <div style={{ position: 'absolute', inset: 0, backgroundImage: 'url("/assets/war-bg.jpg")', backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed', zIndex: 0 }}></div>
-            <div style={{ position: 'absolute', inset: 0, backgroundColor: 'rgba(17, 24, 39, 0.7)', zIndex: 1 }}></div>
+            <div style={{ position: 'absolute', inset: 0, backgroundColor: 'rgba(17, 24, 39, 0.4)', zIndex: 1 }}></div>
 
             <div className={classes.warContainer} style={{ position: 'relative', zIndex: 10 }}>
                 <span className={classes.eyebrow} style={{ color: '#E5E7EB' }}>
@@ -128,7 +128,7 @@ const StorySection = () => {
                                 width: '100vw',
                                 height: '100%',
                                 marginLeft: 'calc(50% - 50vw)', // Break out of container
-                                backgroundImage: `linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.3) 100%), url(${block.bgImage})`,
+                                backgroundImage: `linear-gradient(to right, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.1) 100%), url(${block.bgImage})`,
                                 backgroundSize: 'cover',
                                 backgroundPosition: 'center',
                                 zIndex: 0
