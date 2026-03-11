@@ -80,8 +80,14 @@ const NewsSection = () => {
     ).slice(0, 4);
 
     return (
-        <section style={{ backgroundColor: '#F9FAFB', paddingBottom: '120px', paddingTop: '120px', borderTop: '1px solid #E5E7EB' }}>
+        <section style={{ position: 'relative', backgroundColor: '#000000', paddingBottom: '120px', paddingTop: '120px', borderTop: '1px solid #111827', overflow: 'hidden' }}>
+            {/* Background Image & Overlay */}
+            <div style={{ position: 'absolute', inset: 0, backgroundImage: 'url("/assets/news-bg.jpg")', backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed', zIndex: 0 }}></div>
+            <div style={{ position: 'absolute', inset: 0, backgroundColor: 'rgba(17, 24, 39, 0.65)', zIndex: 1 }}></div>
+
             <div style={{
+                position: 'relative',
+                zIndex: 10,
                 width: '100vw',
                 marginLeft: 'calc(50% - 50vw)',
                 marginRight: 'calc(50% - 50vw)',
@@ -89,10 +95,10 @@ const NewsSection = () => {
                 paddingRight: 'clamp(20px, 5vw, 100px)'
             }}>
                 <div style={{ textAlign: 'center', marginBottom: '48px' }}>
-                    <h2 style={{ fontSize: '36px', fontWeight: 700, color: '#111827', marginBottom: '16px' }}>
+                    <h2 style={{ fontSize: '36px', fontWeight: 700, color: '#FFFFFF', marginBottom: '16px' }}>
                         Latest from the Ecosystem
                     </h2>
-                    <p style={{ fontSize: '18px', color: '#6B7280', maxWidth: '600px', margin: '0 auto' }}>
+                    <p style={{ fontSize: '18px', color: 'rgba(255, 255, 255, 0.8)', maxWidth: '600px', margin: '0 auto' }}>
                         Explore recent news, milestones, and announcements across all our platforms.
                     </p>
                 </div>
@@ -113,8 +119,8 @@ const NewsSection = () => {
                                 padding: '10px 24px',
                                 borderRadius: '30px',
                                 border: 'none',
-                                backgroundColor: activeFilter === cat ? '#111827' : '#F3F4F6',
-                                color: activeFilter === cat ? '#FFFFFF' : '#111827',
+                                backgroundColor: activeFilter === cat ? '#FCD144' : 'rgba(255, 255, 255, 0.1)',
+                                color: activeFilter === cat ? '#111827' : '#FFFFFF',
                                 fontSize: '11px',
                                 fontWeight: 600,
                                 textTransform: 'uppercase',
