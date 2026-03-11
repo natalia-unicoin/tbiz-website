@@ -84,25 +84,15 @@ const WarOnCryptoSection = () => {
             <div className={classes.warContainer}>
                 <span className={classes.eyebrow}>War on Crypto</span>
                 <h2 className={classes.titleSmall}>Standing for Transparency</h2>
-                <div className={classes.warGrid}>
+                <div className={classes.warGrid} style={{ gridTemplateColumns: '1fr', maxWidth: '800px', margin: '0 auto' }}>
                     <div className={classes.warCard}>
-                        <p className={classes.descriptionSmall}>
-                            As innovation in digital finance continues to grow, the ecosystem has also faced regulatory challenges that reflect broader debates within the cryptocurrency industry.
-                        </p>
-                    </div>
-                    <div className={classes.warCard}>
-                        <p className={classes.descriptionSmall}>
-                            These events became known as the War on Crypto, highlighting the tensions between innovation and regulation in emerging financial technologies.
-                        </p>
-                    </div>
-                    <div className={classes.warCard}>
-                        <p className={classes.descriptionSmall}>
-                            The story represents an important chapter in the ongoing conversation about transparency, fairness, and the future of digital assets.
+                        <p className={classes.descriptionSmall} style={{ fontSize: '1.125rem', lineHeight: 1.8 }}>
+                            The U.S. Securities and Exchange Commission (SEC) has filed charges against Unicoin, alleging fraudulent practices in the promotion and sale of digital assets. These blatantly false accusations are part of a broader "regulation by enforcement" strategy that has been widely questioned by various stakeholders, including 18 U.S. states that have sued the SEC for overstepping its regulatory authority.
                         </p>
                     </div>
                 </div>
-                <a href="https://waroncrypto.com" className={classes.ctaButtonOutline}>
-                    Read the Full Story
+                <a href="https://unicoin.com/war-on-crypto" target="_blank" rel="noopener noreferrer" className={classes.ctaButtonOutline}>
+                    Read more
                 </a>
             </div>
         </section>
