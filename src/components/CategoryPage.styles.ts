@@ -7,7 +7,7 @@ export const useStyles = makeStyles()((theme) => ({
         color: theme.palette.text.primary,
         fontFamily: theme.typography.fontFamily,
         '::selection': {
-            backgroundColor: '#EBE563',
+            backgroundColor: '#FCD144',
             color: theme.palette.text.primary,
         }
     },

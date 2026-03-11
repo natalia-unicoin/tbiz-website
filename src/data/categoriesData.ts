@@ -7,9 +7,9 @@ export const categoriesData: CategoriesData = {
         headline: 'Create the Future.',
         description: 'Artists, writers, musicians, and content creators who want to own their work and their audience.',
         image: 'assets/creator-main.jpg',
-        color: '#EBE563', // Yellow
-        textColor: 'text-[#EBE563]',
-        bgColor: 'bg-[#EBE563]',
+        color: '#FCD144', // TBIZ Yellow
+        textColor: 'text-[#FCD144]',
+        bgColor: 'bg-[#FCD144]',
         heroVideo: 'assets/videos/creator-hero.mp4', // Placeholder
         scrollText: [
             "Ownership is the new standard.",
@@ -31,7 +31,7 @@ export const categoriesData: CategoriesData = {
                 subtitle: "$10M Allocation",
                 description: "Access grants to kickstart your next big project.",
                 size: "tall",
-                color: "bg-[#EBE563]",
+                color: "bg-[#FCD144]",
                 theme: "light"
             },
             {

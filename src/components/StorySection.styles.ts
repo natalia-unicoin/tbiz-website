@@ -113,7 +113,7 @@ export const useStyles = makeStyles()((theme) => ({
         '&:hover': {
             transform: 'translateY(-2px)',
             boxShadow: '0 6px 20px rgba(252, 209, 68, 0.6)',
-            backgroundColor: '#EBE563' // Slightly lighter hover
+            backgroundColor: '#F4C118' // Warm TBIZ gold highlight
         },
         '& svg': {
             transition: 'transform 0.3s ease'

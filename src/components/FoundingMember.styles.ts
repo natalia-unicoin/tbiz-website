@@ -104,7 +104,7 @@ export const useStyles = makeStyles()((theme) => ({
         letterSpacing: '0.025em', // tracking-wide
     },
     button: {
-        backgroundColor: '#EBE563', // Neon Yellow
+        backgroundColor: '#FCD144', // TBIZ Yellow
         color: theme.palette.text.primary,
         padding: '16px 32px', // px-8 py-4
         fontSize: '0.875rem', // text-sm
@@ -112,11 +112,12 @@ export const useStyles = makeStyles()((theme) => ({
         letterSpacing: '0.1em', // tracking-widest
         textTransform: 'uppercase',
         border: 'none',
-        borderRadius: '9999px',
+        borderRadius: '40px',
         cursor: 'pointer',
-        transition: 'background-color 0.2s',
+        transition: 'all 0.2s',
         '&:hover': {
-            backgroundColor: '#d4cd55',
+            backgroundColor: '#FCD144',
+            filter: 'brightness(1.05)',
         }
     }
 }));

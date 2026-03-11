@@ -99,7 +99,7 @@ export const useStyles = makeStyles()((theme) => ({
         fontWeight: '700 !important' as any,
         fontSize: '15px',
         padding: '16px 36px',
-        borderRadius: '30px',
+        borderRadius: '40px', // Apple-style pill shape
         textTransform: 'uppercase',
         letterSpacing: '1px',
         border: 'none',
@@ -120,7 +120,8 @@ export const useStyles = makeStyles()((theme) => ({
             transition: 'left 0.5s ease',
         },
         '&:hover': {
-            backgroundColor: '#EBE563', // Slightly lighter highlight
+            backgroundColor: '#FCD144', // Strict TBIZ yellow
+            filter: 'brightness(1.05)', // Natural highlight without changing the corporate hue
             transform: 'translateY(-2px)',
             boxShadow: '0 8px 25px rgba(252, 209, 68, 0.4)',
             color: '#000000',
