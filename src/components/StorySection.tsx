@@ -16,7 +16,7 @@ const storyBlocks = [
             "As organizations increasingly relied on distributed teams and global talent, new tools were needed to manage work, productivity, and collaboration with clarity and trust.",
             "This vision laid the foundation for a broader ecosystem built around transparency, technology, and global opportunity."
         ],
-        bgImage: getImagePath('assets/founders-bg.jpg'),
+        bgImage: getImagePath('assets/founders-bg-v2.jpg'),
     },
     {
         id: "sheworks",
