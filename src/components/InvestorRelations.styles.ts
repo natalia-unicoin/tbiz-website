@@ -94,15 +94,7 @@ export const useStyles = makeStyles()((theme) => ({
         letterSpacing: '0',
         display: 'flex',
         alignItems: 'center',
-        gap: theme.spacing(1),
         marginTop: 'auto',
         textDecoration: 'none',
-        '&::after': {
-            content: '"→"',
-            transition: 'transform 0.2s',
-        },
-        '&:hover::after': {
-            transform: 'translateX(4px)',
-        }
     }
 }));

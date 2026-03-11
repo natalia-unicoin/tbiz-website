@@ -51,13 +51,16 @@ export const useStyles = makeStyles()((theme) => ({
         objectPosition: 'left center',
     },
     description: {
-        color: '#6B7280', // Lighter text for secondary info
-        lineHeight: 1.6,
-        maxWidth: '24rem',
-        marginBottom: theme.spacing(4),
+        color: '#4B5563', // Lighter text for secondary info
+        lineHeight: 1.5,
+        maxWidth: '32rem',
+        marginBottom: theme.spacing(6),
         fontFamily: theme.typography.body1.fontFamily,
-        fontSize: '14px',
+        fontSize: '18px',
         textAlign: 'left',
+        [theme.breakpoints.up('md')]: {
+            fontSize: '24px',
+        }
     },
     socialWrapper: {
         display: 'flex',
@@ -103,9 +106,9 @@ export const useStyles = makeStyles()((theme) => ({
     },
     columnTitle: {
         fontFamily: theme.typography.body1.fontFamily,
-        fontWeight: 700,
-        fontSize: '11px',
-        letterSpacing: '0.1em',
+        fontWeight: 600,
+        fontSize: '14px',
+        letterSpacing: '0.05em',
         textTransform: 'uppercase',
         marginBottom: theme.spacing(3),
         color: '#9CA3AF', // Gray for headings
@@ -121,9 +124,15 @@ export const useStyles = makeStyles()((theme) => ({
     linkItem: {
         color: '#4B5563',
         textDecoration: 'none',
-        fontFamily: theme.typography.body1.fontFamily,
-        fontSize: '14px',
+        fontFamily: theme.typography.h1.fontFamily, // Massive Typography look
+        fontSize: '24px',
+        fontWeight: 700,
+        letterSpacing: '-0.02em',
+        lineHeight: 1.3,
         transition: 'color 0.2s',
+        [theme.breakpoints.up('md')]: {
+            fontSize: '32px',
+        },
         '&:hover': {
             color: '#111827',
         }

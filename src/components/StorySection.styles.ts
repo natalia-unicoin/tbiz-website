@@ -70,10 +70,16 @@ export const useStyles = makeStyles()((theme) => ({
         letterSpacing: '-0.02em !important',
         marginBottom: theme.spacing(4),
         lineHeight: 1.1,
-        fontSize: 'clamp(2.625rem, 5.25vw, 4.5rem) !important',
+        fontSize: '44px !important',
         textAlign: 'center !important' as any,
         color: '#111827', // Very dark gray for premium contrast
         textWrap: 'balance',
+        [theme.breakpoints.up('md')]: {
+            fontSize: '64px !important',
+        },
+        [theme.breakpoints.up('lg')]: {
+            fontSize: '72px !important',
+        }
     },
     description: {
         fontSize: 'clamp(1.125rem, 1.5vw, 1.5rem)',
@@ -162,10 +168,14 @@ export const useStyles = makeStyles()((theme) => ({
     titleSmall: {
         fontFamily: theme.typography.h2.fontFamily,
         fontWeight: 700,
-        fontSize: '32px',
+        fontSize: '44px',
+        lineHeight: 1.1,
         marginBottom: theme.spacing(2),
         [theme.breakpoints.up('md')]: {
-            fontSize: '40px',
+            fontSize: '64px',
+        },
+        [theme.breakpoints.up('lg')]: {
+            fontSize: '72px',
         },
         color: '#111827',
     },

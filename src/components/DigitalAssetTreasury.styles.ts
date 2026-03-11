@@ -59,17 +59,17 @@ export const useStyles = makeStyles()((theme) => ({
     },
     title: {
         fontFamily: theme.typography.h1.fontFamily, // Montserrat
-        fontSize: '40px', // Fallback constraint, but user requested 56-64px
+        fontSize: '44px',
         fontWeight: 700, // Bold
         letterSpacing: '-0.03em', // Typical bold tracking
         lineHeight: 1.1,
         marginBottom: theme.spacing(3),
         color: theme.palette.text.primary,
         [theme.breakpoints.up('md')]: {
-            fontSize: '56px',
+            fontSize: '64px',
         },
         [theme.breakpoints.up('lg')]: {
-            fontSize: '64px', // Reaching the 64px constraint
+            fontSize: '72px',
         }
     },
     subtitle: {
@@ -157,16 +157,6 @@ export const useStyles = makeStyles()((theme) => ({
         lineHeight: 1.5,
         display: 'flex',
         alignItems: 'flex-start',
-        gap: '8px', // Slightly tighter gap for arrow
-        '&::before': {
-            content: '"→"', // Minimal institutional arrow
-            display: 'inline-block',
-            color: '#9CA3AF', // Subtle gray arrow, less prominent than text
-            flexShrink: 0,
-            marginTop: '0px', // Align with text baseline naturally
-            fontSize: '18px', // Match or slightly exceed text size
-            fontWeight: 300, // Light/Minimal feel
-        },
         [theme.breakpoints.up('md')]: {
             fontSize: '18px',
         }

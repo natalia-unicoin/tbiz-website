@@ -58,12 +58,12 @@ export const useStyles = makeStyles()((theme) => {
             lineHeight: 1.1,
             color: textColor,
             marginBottom: theme.spacing(4),
-            fontSize: '32px',
+            fontSize: '44px',
             [theme.breakpoints.up('md')]: {
-                fontSize: '56px',
+                fontSize: '64px',
             },
             [theme.breakpoints.up('lg')]: {
-                fontSize: '64px',
+                fontSize: '72px',
             }
         },
         accent: {

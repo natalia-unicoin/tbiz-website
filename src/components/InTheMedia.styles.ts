@@ -90,12 +90,5 @@ export const useStyles = makeStyles()((theme) => ({
         display: 'flex',
         alignItems: 'center',
         gap: '8px',
-        '&:after': {
-            content: '"→"',
-            transition: 'transform 0.3s ease',
-        },
-        '.mediaCard:hover &:after': {
-            transform: 'translateX(5px)',
-        }
     }
 }));
