@@ -54,6 +54,7 @@ const storyBlocks = [
             "This approach bridges the gap between traditional finance and blockchain technology, offering a more stable path for digital asset holders."
         ],
         cta: { text: "Learn About Unicoin", link: "https://unicoin.com" },
+        bgImage: getImagePath('assets/unicoin-bg-v2.jpg'),
     },
     {
         id: "vision",
