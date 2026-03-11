@@ -21,10 +21,11 @@ const ScrollIndicator = () => {
             transform: 'translateY(-50%)',
             width: '6px',
             height: '160px',
-            backgroundColor: 'rgba(255, 255, 255, 0.15)', // Semi-transparent track
+            backgroundColor: 'rgba(255, 255, 255, 0.2)', // Semi-transparent track
             borderRadius: '10px',
-            zIndex: 100,
+            zIndex: 9999,
             overflow: 'hidden',
+            mixBlendMode: 'difference', // Ensure visibility on both dark and light backgrounds
         }}>
             <motion.div
                 style={{
